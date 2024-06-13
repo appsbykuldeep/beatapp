@@ -1,0 +1,43 @@
+class SPActionRequest {
+  String? CHARACTER_SR_NUM;
+  String? DOMESTIC_SR_NUM;
+  String? TENANT_SR_NUM;
+  String? EMPLOYEE_SR_NUM;
+  String? IS_CRIMINAL_RECORD;
+  String? DESCRIPTION;
+  String? DISTRICT_CD;
+  String? OFFICE_CD;
+  String? ACTION_TAKEN;
+  String? REMARKS;
+  String? SP_RECOMMEND_ACTION;
+  String? SP_RECOMMEND_REASON;
+
+  SPActionRequest(
+      this.CHARACTER_SR_NUM,
+      this.DOMESTIC_SR_NUM,
+      this.TENANT_SR_NUM,
+      this.EMPLOYEE_SR_NUM,
+      this.IS_CRIMINAL_RECORD,
+      this.DESCRIPTION,
+      this.DISTRICT_CD,
+      this.OFFICE_CD,
+      this.ACTION_TAKEN,
+      this.REMARKS,
+      this.SP_RECOMMEND_ACTION,
+      this.SP_RECOMMEND_REASON);
+
+  Map<String, dynamic> toJson() => {
+        "CHARACTER_SR_NUM": CHARACTER_SR_NUM,
+        "DOMESTIC_SR_NUM": DOMESTIC_SR_NUM,
+        "TENANT_SR_NUM": TENANT_SR_NUM,
+        "EMPLOYEE_SR_NUM": EMPLOYEE_SR_NUM,
+        "IS_CRIMINAL_RECORD": IS_CRIMINAL_RECORD,
+        "DESCRIPTION": DESCRIPTION,
+        "DISTRICT_CD": DISTRICT_CD,
+        "OFFICE_CD": OFFICE_CD,
+        "ACTION_TAKEN": ACTION_TAKEN,
+        "REMARKS": REMARKS,
+        "SP_RECOMMEND_ACTION": SP_RECOMMEND_ACTION,
+        "SP_RECOMMEND_REASON": SP_RECOMMEND_REASON
+      };
+}
