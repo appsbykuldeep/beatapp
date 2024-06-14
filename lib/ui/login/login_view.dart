@@ -124,7 +124,7 @@ class _LoginState extends State<Login> {
     if (response.statusCode == 200) {
       LoginResponse loginResponse = LoginResponse.fromJson(response.data);
       // saveUserObject(response.data);
-      AppUser.setSaveUserDetail(loginResponse);
+      AppUser.setSaveUserDetail = loginResponse;
       PreferenceHelper().saveBool(Constraints.IS_LOGIN, true);
       Navigator.pop(context);
       Navigator.pushAndRemoveUntil(
@@ -164,7 +164,7 @@ class _LoginState extends State<Login> {
     if (res.statusCode == 200) {
       LoginResponse loginResponse = loginResponseFromJson(res.body);
       // saveUserObject(res.body);
-      AppUser.setSaveUserDetail(loginResponse);
+      AppUser.setSaveUserDetail = loginResponse;
 
       // pref.saveString(Constraints.PS_CD, loginResponse.psCd);
       // pref.saveString(Constraints.ACCESS_TOKEN, loginResponse.accessToken);

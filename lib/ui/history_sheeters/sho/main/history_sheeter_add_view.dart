@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:beatapp/api/api_end_point.dart';
 import 'package:beatapp/api/api_connection.dart' as HttpRequst;
+import 'package:beatapp/api/api_end_point.dart';
 import 'package:beatapp/custom_view/button.dart';
 import 'package:beatapp/custom_view/custom_view.dart';
 import 'package:beatapp/custom_view/edit_text.dart';

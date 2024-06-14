@@ -8,7 +8,7 @@ import 'package:beatapp/ui/dialog/dialog_helper.dart';
 import 'package:beatapp/ui/summon/summon_detail_view.dart';
 import 'package:beatapp/utility/message_utility.dart';
 import 'package:beatapp/utility/resource_provider.dart';
-import 'package:dio/src/response.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 class CompletedFragment extends StatefulWidget {
@@ -273,7 +273,7 @@ class _CompletedFragmentState extends State<CompletedFragment> {
             Expanded(
               flex: 2,
               child: Text(
-                data.FIR_REG_NUM ?? "",
+                data.FIR_REG_NUM,
                 maxLines: 2,
               ),
             ),
@@ -281,28 +281,28 @@ class _CompletedFragmentState extends State<CompletedFragment> {
               flex: 2,
               child: Container(
                 alignment: Alignment.center,
-                child: Text(data.ASSIGNED_ON ?? "", maxLines: 2),
+                child: Text(data.ASSIGNED_ON, maxLines: 2),
               ),
             ),
             Expanded(
               flex: 2,
               child: Container(
                 alignment: Alignment.center,
-                child: Text(data.ASSIGNED_TO_NAME ?? "", maxLines: 2),
+                child: Text(data.ASSIGNED_TO_NAME, maxLines: 2),
               ),
             ),
             Expanded(
               flex: 2,
               child: Container(
                 alignment: Alignment.center,
-                child: Text(data.ASSIGNED_TO_RANK ?? "", maxLines: 2),
+                child: Text(data.ASSIGNED_TO_RANK, maxLines: 2),
               ),
             ),
             Expanded(
               flex: 2,
               child: Container(
                 alignment: Alignment.center,
-                child: Text(data.COMPLETION_DATE ?? "", maxLines: 2),
+                child: Text(data.COMPLETION_DATE, maxLines: 2),
               ),
             ),
           ],

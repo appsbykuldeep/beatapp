@@ -10,7 +10,7 @@ import 'package:beatapp/ui/summon/sho/assign_officer_view.dart';
 import 'package:beatapp/utility/camera_and_file_provider.dart';
 import 'package:beatapp/utility/message_utility.dart';
 import 'package:beatapp/utility/resource_provider.dart';
-import 'package:dio/src/response.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -185,30 +185,27 @@ class _UnassignedFragmentState extends State<UnassignedFragment> {
                       ),
                       pw.SizedBox(width: 8),
                       pw.Expanded(
-                        child: pw.Text(finalData[index].SUMM_WARR_SR_NUM ?? '',
+                        child: pw.Text(finalData[index].SUMM_WARR_SR_NUM,
                             style: const pw.TextStyle(fontSize: 10)),
                       ),
                       pw.SizedBox(width: 8),
                       pw.Expanded(
-                        child: pw.Text(
-                            finalData[index].FIR_PETTY_CASE_NUM ?? '',
+                        child: pw.Text(finalData[index].FIR_PETTY_CASE_NUM,
                             style: const pw.TextStyle(fontSize: 10)),
                       ),
                       pw.SizedBox(width: 8),
                       pw.Expanded(
-                        child: pw.Text(
-                            finalData[index].FIR_PETTY_CASE_DATE ?? '',
+                        child: pw.Text(finalData[index].FIR_PETTY_CASE_DATE,
                             style: const pw.TextStyle(fontSize: 10)),
                       ),
                       pw.SizedBox(width: 8),
                       pw.Expanded(
-                        child: pw.Text(finalData[index].POLICESTATIONNAME ?? '',
+                        child: pw.Text(finalData[index].POLICESTATIONNAME,
                             style: const pw.TextStyle(fontSize: 10)),
                       ),
                       pw.SizedBox(width: 8),
                       pw.Expanded(
-                        child: pw.Text(
-                            finalData[index].ISSUED_TO_PERSON_NAME ?? '',
+                        child: pw.Text(finalData[index].ISSUED_TO_PERSON_NAME,
                             style: const pw.TextStyle(fontSize: 10)),
                       ),
                     ],
@@ -439,24 +436,24 @@ class _UnassignedFragmentState extends State<UnassignedFragment> {
             SizedBox(
               width: 130,
               child: Text(
-                data.SUMM_WARR_SR_NUM ?? "",
+                data.SUMM_WARR_SR_NUM,
               ),
             ),
             SizedBox(
               width: 130,
-              child: Text(data.FIR_PETTY_CASE_NUM ?? ""),
+              child: Text(data.FIR_PETTY_CASE_NUM),
             ),
             SizedBox(
               width: 130,
-              child: Text(data.FIR_PETTY_CASE_DATE ?? ""),
+              child: Text(data.FIR_PETTY_CASE_DATE),
             ),
             SizedBox(
               width: 130,
-              child: Text(data.POLICESTATIONNAME ?? ""),
+              child: Text(data.POLICESTATIONNAME),
             ),
             SizedBox(
               width: 130,
-              child: Text(data.ISSUED_TO_PERSON_NAME ?? ""),
+              child: Text(data.ISSUED_TO_PERSON_NAME),
             ),
           ],
         ),

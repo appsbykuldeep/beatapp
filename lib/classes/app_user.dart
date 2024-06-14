@@ -8,9 +8,6 @@ import 'package:beatapp/utility/build_utils.dart';
 class AppUser {
   AppUser._();
 
-  // static final AppUser _instance = AppUser._();
-  // static AppUser get instance => _instance;
-
   static LoginResponse user = LoginResponse.fromJson({});
   static BuildDetails buildDetails = BuildDetails.empty;
   static final pref = PreferenceHelper();
@@ -34,7 +31,7 @@ class AppUser {
     pref.saveString(prefKey, "");
   }
 
-  static void setSaveUserDetail(LoginResponse e) {
+  static set setSaveUserDetail(LoginResponse e) {
     user = e;
     saveUserDetail();
   }

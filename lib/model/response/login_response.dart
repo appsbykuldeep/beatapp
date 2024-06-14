@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:beatapp/classes/app_user.dart';
-import 'package:beatapp/extensions/api_reponse_parser.dart';
 import 'package:beatapp/model/login_response.dart';
+import 'package:beatapp/utility/extentions/api_reponse_parser.dart';
 
 import '../../preferences/preference_util.dart';
 

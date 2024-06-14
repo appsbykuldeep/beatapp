@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:beatapp/preferences/preference_util.dart';
 import 'package:beatapp/ui/login/login_view.dart';
+import 'package:beatapp/utility/extentions/string_ext.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class NavigatorUtils {
   static expireAuthentication(context) {
@@ -38,31 +38,14 @@ class NavigatorUtils {
         "https://www.google.com/maps/search/?api=1&query=$encodedAddress";
     String appleMapUrl = "http://maps.apple.com/?q=$encodedAddress";
     if (Platform.isAndroid) {
-      try {
-        if (await canLaunch(googleMapUrl)) {
-          await launch(googleMapUrl);
-        }
-      } catch (error) {
-        throw ("Cannot launch Google map");
-      }
+      googleMapUrl.launchURL();
     }
     if (Platform.isIOS) {
-      try {
-        if (await canLaunch(appleMapUrl)) {
-          await launch(appleMapUrl);
-        }
-      } catch (error) {
-        throw ("Cannot launch Apple map");
-      }
+      appleMapUrl.launchURL();
     }
   }
 
   static void launchMapsUrlFromLatLong(double lat, double lon) async {
-    final url = 'https://www.google.com/maps/search/?api=1&query=$lat,$lon';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
+    'https://www.google.com/maps/search/?api=1&query=$lat,$lon'.launchURL();
   }
 }

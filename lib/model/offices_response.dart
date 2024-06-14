@@ -4,7 +4,7 @@
 
 import 'dart:convert';
 
-import 'package:beatapp/extensions/api_reponse_parser.dart';
+import 'package:beatapp/utility/extentions/api_reponse_parser.dart';
 
 List<OfficesResponse> officesResponseFromJson(String str) =>
     List<OfficesResponse>.from(
