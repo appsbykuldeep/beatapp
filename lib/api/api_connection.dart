@@ -232,14 +232,18 @@ Future<Response> postRequestWithBody(
   Logger.printLogMsg(EndPoints.BASE_URL + url);
   Response response = emptyresponse;
   try {
-    response = await _dio.post(EndPoints.BASE_URL + url,
-        data: jsonEncode(data),
-        options: Options(headers: {
+    response = await _dio.post(
+      EndPoints.BASE_URL + url,
+      data: jsonEncode(data),
+      options: Options(
+        headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           'X-Certificate-Pinning': 'true',
           'Certificate': crtData
-        }));
+        },
+      ),
+    );
     showDialog ? Navigator.pop(context) : null;
     if (response.statusCode == 200) {
       Logger.printLogMsg('post response $response');

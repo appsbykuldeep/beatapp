@@ -4,9 +4,12 @@ import 'package:beatapp/preferences/preference_util.dart';
 import 'package:beatapp/ui/login/login_view.dart';
 import 'package:beatapp/utility/extentions/string_ext.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class NavigatorUtils {
-  static expireAuthentication(context) {
+  static expireAuthentication([BuildContext? context]) {
+    context ??= Get.context;
+    if (context == null) return;
     PreferenceHelper().clearAll();
     Navigator.pushAndRemoveUntil(
         context,

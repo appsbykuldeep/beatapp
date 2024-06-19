@@ -1,33 +1,44 @@
 import 'package:beatapp/localization/app_translations.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class DialogHelper {
-  static showLoaderDialog(BuildContext context) {
-    showDialog(
-      barrierDismissible: false,
+  static bool _isShowingLoader = false;
 
+  static Future<void> showLoaderDialog([BuildContext? context]) async {
+    context ??= Get.context;
+    if (context == null) return;
+    _isShowingLoader = true;
+    await showDialog(
+      barrierDismissible: false,
       context: context,
       builder: (BuildContext context) {
-        return WillPopScope(
-          onWillPop: ()async{
-            return false;
-          },
-          child: AlertDialog(
-            content:  Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const CircularProgressIndicator(
-                  color: Colors.red,
+        return AlertDialog(
+          content: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const CircularProgressIndicator(
+                color: Colors.red,
+              ),
+              Container(
+                margin: const EdgeInsets.only(left: 15),
+                child: Text(
+                  AppTranslations.of(context)!.text("please_wait"),
                 ),
-                Container(
-                    margin: const EdgeInsets.only(left: 15),
-                    child: Text(AppTranslations.of(context)!.text("please_wait"))),
-              ],
-            ),
+              ),
+            ],
           ),
         );
       },
     );
+
+    _isShowingLoader = false;
+  }
+
+  static void hideLoaderDialog() {
+    if (_isShowingLoader) {
+      Get.back();
+    }
   }
 
   static showMessageDialog(BuildContext context, String msg) {
@@ -61,7 +72,7 @@ class DialogHelper {
     // set up the buttons
     Widget okButton = TextButton(
       child: Text(AppTranslations.of(context)!.text("yes")),
-      onPressed: (){
+      onPressed: () {
         Navigator.pop(context);
         actionYes();
       },
@@ -89,14 +100,14 @@ class DialogHelper {
     );
   }
 
-  static Future<String> openDatePickerDialog(
-      BuildContext context,{bool isFuture=true,bool isPast=true}) async {
+  static Future<String> openDatePickerDialog(BuildContext context,
+      {bool isFuture = true, bool isPast = true}) async {
     DateTime selectedDate = DateTime.now();
     final DateTime? picked = await showDatePicker(
         context: context,
         initialDate: selectedDate,
-        firstDate: isPast?DateTime(2015, 8):DateTime.now(),
-        lastDate: isFuture?DateTime(2101):DateTime.now());
+        firstDate: isPast ? DateTime(2015, 8) : DateTime.now(),
+        lastDate: isFuture ? DateTime(2101) : DateTime.now());
     if (picked != null && picked != selectedDate) {
       selectedDate = picked;
       return "${selectedDate.month}/${selectedDate.day}/${selectedDate.year}";
@@ -106,21 +117,22 @@ class DialogHelper {
 
   static closeAppDialog(context) async {
     return (await showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-      title: const Text('Are you sure?'),
-      content: const Text('Do you want to exit an App'),
-      actions: <Widget>[
-        TextButton(
-          onPressed: () => Navigator.of(context).pop(false),
-          child: const Text('No'),
-        ),
-        TextButton(
-          onPressed: () => Navigator.of(context).pop(true),
-          child: const Text('Yes'),
-        ),
-      ],
-    ),
-    )) ?? false;
+          context: context,
+          builder: (context) => AlertDialog(
+            title: const Text('Are you sure?'),
+            content: const Text('Do you want to exit an App'),
+            actions: <Widget>[
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(false),
+                child: const Text('No'),
+              ),
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(true),
+                child: const Text('Yes'),
+              ),
+            ],
+          ),
+        )) ??
+        false;
   }
 }
