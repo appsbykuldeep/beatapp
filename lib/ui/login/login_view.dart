@@ -192,6 +192,17 @@ class _LoginState extends State<Login> {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
+                      Container(
+                        alignment: Alignment.centerRight,
+                        padding: const EdgeInsets.only(right: 10),
+                        child: Text(
+                          "Version : ${BuildUtils.appVersion}",
+                          style: const TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                      ),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
                         child: Text(

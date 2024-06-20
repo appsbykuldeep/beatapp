@@ -1,13 +1,16 @@
 // ignore_for_file: constant_identifier_names
 
 class EndPoints {
-  static const String BASE_URL = "http://45.64.156.147/PrahariAPI/";
-  //static const String BASE_URL = "https://cctnsup.gov.in/PrahariAPI/";
-  static const String BASE_URLToken = "http://45.64.156.147/PrahariToken/";
-  //static const String BASE_URLToken = "https://cctnsup.gov.in/PrahariToken/";
+  /// Testing Server
+  static const String host = "http://164.100.181.132";
 
-  /*static const String BASE_URL = "http://164.100.181.132/PrahariAPI/";
-  static const String BASE_URLToken = "http://164.100.181.132/PrahariToken/";*/
+  /// Live Server
+  // static const String host = "http://45.64.156.147";
+
+  static bool get isLiveApk => host.contains("45.64.156.147");
+
+  static const String BASE_URL = "$host/PrahariAPI/";
+  static const String BASE_URLToken = "$host/PrahariToken/";
 
   static const String END_POINT_GET_VERSION = "Version/GetVersion";
 

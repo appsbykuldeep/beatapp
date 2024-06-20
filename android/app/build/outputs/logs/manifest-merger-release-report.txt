@@ -1,0 +1,566 @@
+-- Merging decision tree log ---
+application
+INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:20:3-58:17
+MERGED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:10:5-34:19
+MERGED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:10:5-34:19
+MERGED from [:geolocator_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\geolocator_android\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-15:19
+MERGED from [:geolocator_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\geolocator_android\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-15:19
+MERGED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:17:5-28:19
+MERGED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:17:5-28:19
+MERGED from [:printing] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\printing\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-19:19
+MERGED from [:printing] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\printing\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-19:19
+MERGED from [:url_launcher_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-14:19
+MERGED from [:url_launcher_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-14:19
+MERGED from [com.google.android.gms:play-services-location:21.2.0] C:\Users\User-23\.gradle\caches\transforms-3\cc734f6be624a0210bfc44459063267f\transformed\jetified-play-services-location-21.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.2.0] C:\Users\User-23\.gradle\caches\transforms-3\cc734f6be624a0210bfc44459063267f\transformed\jetified-play-services-location-21.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\e636f3d88b973f5f86e7f9b63b5a5a21\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\e636f3d88b973f5f86e7f9b63b5a5a21\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\User-23\.gradle\caches\transforms-3\aa8211368f791ef90268469b33a8389b\transformed\jetified-play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\User-23\.gradle\caches\transforms-3\aa8211368f791ef90268469b33a8389b\transformed\jetified-play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\97b6ea539c4ede5de03d8240bf26c1be\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\97b6ea539c4ede5de03d8240bf26c1be\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\11c39b50e2cc505eac8f12b73b4e1f46\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\11c39b50e2cc505eac8f12b73b4e1f46\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\User-23\.gradle\caches\transforms-3\0c00521e3435ad31e4f84a78c649490a\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\User-23\.gradle\caches\transforms-3\0c00521e3435ad31e4f84a78c649490a\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\00c730b6549c08f5b9567eff2980665a\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\00c730b6549c08f5b9567eff2980665a\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\User-23\.gradle\caches\transforms-3\05ee3aba8df77e2f6aed18db588566ba\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\User-23\.gradle\caches\transforms-3\05ee3aba8df77e2f6aed18db588566ba\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\User-23\.gradle\caches\transforms-3\5b1bd84f2a8a77960b0bc6797d8cd93c\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\User-23\.gradle\caches\transforms-3\5b1bd84f2a8a77960b0bc6797d8cd93c\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:requestLegacyExternalStorage
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:23:5-48
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+	android:label
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:24:5-34
+	android:debuggable
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:25:5-30
+	tools:ignore
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:28:5-38
+	android:icon
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:21:5-45
+	android:allowBackup
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:27:5-32
+	android:usesCleartextTraffic
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:26:5-40
+	android:name
+		INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:22:5-38
+manifest
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:1:1-78:12
+INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:1:1-78:12
+INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:1:1-78:12
+INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:1:1-78:12
+MERGED from [:android_intent_plus] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\android_intent_plus\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:external_path] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\external_path\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:flutter_image_compress_common] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\flutter_image_compress_common\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-11:12
+MERGED from [:flutter_keyboard_visibility] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\flutter_keyboard_visibility\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-36:12
+MERGED from [:flutter_plugin_android_lifecycle] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:fluttertoast] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\fluttertoast\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:geolocator_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\geolocator_android\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-17:12
+MERGED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-30:12
+MERGED from [:package_info_plus] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\package_info_plus\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:path_provider_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\path_provider_android\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:permission_handler_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\permission_handler_android\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:printing] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\printing\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-21:12
+MERGED from [:shared_preferences_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\shared_preferences_android\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:sqflite] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\sqflite\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:url_launcher_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-16:12
+MERGED from [:webview_flutter_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\webview_flutter_android\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-location:21.2.0] C:\Users\User-23\.gradle\caches\transforms-3\cc734f6be624a0210bfc44459063267f\transformed\jetified-play-services-location-21.2.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\User-23\.gradle\caches\transforms-3\0e4993a0670d87c95390870e9aa7dca1\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\User-23\.gradle\caches\transforms-3\1e9a024556b2bd0f73e4a5f81d9cd65b\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-base:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\e636f3d88b973f5f86e7f9b63b5a5a21\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\User-23\.gradle\caches\transforms-3\aa8211368f791ef90268469b33a8389b\transformed\jetified-play-services-tasks-18.1.0\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\97b6ea539c4ede5de03d8240bf26c1be\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\User-23\.gradle\caches\transforms-3\e9febbc435df7244efe72a5964cbd5f7\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.7.2] C:\Users\User-23\.gradle\caches\transforms-3\7b1ea3f5022e785afe4f18f83fb4ef4c\transformed\jetified-activity-1.7.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.browser:browser:1.5.0] C:\Users\User-23\.gradle\caches\transforms-3\4de3f5d9a4e60046c63f8cfc1c74d72b\transformed\browser-1.5.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.webkit:webkit:1.11.0] C:\Users\User-23\.gradle\caches\transforms-3\e0989c255e642e0b62d538bf4e6c169b\transformed\webkit-1.11.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\User-23\.gradle\caches\transforms-3\5a91cede716f5ad2c864778c5052a9ee\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\98fc2ac903651be95509df81bdb52d51\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\dd53be1a283512d5a038024c1792d674\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\11c39b50e2cc505eac8f12b73b4e1f46\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\User-23\.gradle\caches\transforms-3\0c00521e3435ad31e4f84a78c649490a\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\User-23\.gradle\caches\transforms-3\78c0ae40d57a4ba1a3e30fa9c9f3509a\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\bdc4f2480dbf9dede476855e5394c3b7\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\02a35d42c509a462c7c9c7e50694b7b0\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\00c730b6549c08f5b9567eff2980665a\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\aa198b6d897cd683cb90670884e31c30\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\dfc43b4299d1db826bd267de78135275\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\bc64581179bf034c8d596994d3971474\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\6748e2247f55479917c90d4d426aad50\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\a7448a0b5c6d60296ff9f69ad5f9fc74\transformed\jetified-core-ktx-1.13.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\e42e73d68633e27340f5774e68bfdea7\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\User-23\.gradle\caches\transforms-3\84e4b224a5c98f00f8230da2418f5dd1\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\User-23\.gradle\caches\transforms-3\4f795d8b544e5d39bbbe679587c1b5b3\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\e881b800cb33989831fb4c17e6c13d2f\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\User-23\.gradle\caches\transforms-3\7626564c74b63b373f58bd972db6726b\transformed\jetified-annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.heifwriter:heifwriter:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\29496ee703f66f30b3c1dd66abf30f2d\transformed\heifwriter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] C:\Users\User-23\.gradle\caches\transforms-3\b80cd6f4ddeb1e77bfc6466ff29245f8\transformed\exifinterface-1.3.7\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\User-23\.gradle\caches\transforms-3\05ee3aba8df77e2f6aed18db588566ba\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\cc373aceb511ec84bba0ad645dae6e8b\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\8819686cc138557098db56b4361e0940\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\User-23\.gradle\caches\transforms-3\5b1bd84f2a8a77960b0bc6797d8cd93c\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\ca6fb8e868012069f778141fb971ed1b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\User-23\.gradle\caches\transforms-3\978181720c6b59594697048be529e3d6\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:1:1-78:12
+INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:1:1-78:12
+INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:1:1-78:12
+	package
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:3:3-27
+		INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:1:1-78:12
+		INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:2:3-49
+	android:versionCode
+		INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:1:1-78:12
+		INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-feature#android.hardware.camera
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:5:3-7:32
+	android:required
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:7:5-29
+	android:name
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:6:5-43
+uses-permission#android.permission.INTERNET
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:9:3-65
+	android:name
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:9:20-62
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:10:3-77
+	android:name
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:10:20-74
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:11:3-79
+	android:name
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:11:20-76
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:12:3-78
+MERGED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:10:5-12:38
+MERGED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:10:5-12:38
+	android:maxSdkVersion
+		ADDED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:12:9-35
+	android:name
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:12:20-75
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:13:3-77
+	android:name
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:13:20-74
+uses-permission#android.permission.ACCESS_DOWNLOAD_MANAGER
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:15:3-80
+	android:name
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:15:20-77
+uses-permission#android.permission.CAMERA
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:17:3-63
+	android:name
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:17:20-60
+queries
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:62:3-77:13
+intent#action:name:android.intent.action.VIEW+data:scheme:sms
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:64:5-67:14
+action#android.intent.action.VIEW
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:65:7-59
+	android:name
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:65:15-56
+data
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:66:7-36
+	android:scheme
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:66:13-33
+intent#action:name:android.intent.action.VIEW+data:scheme:tel
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:69:5-72:14
+intent#action:name:android.support.customtabs.action.CustomTabsService
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:74:5-76:14
+action#android.support.customtabs.action.CustomTabsService
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:75:7-84
+	android:name
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:75:15-81
+uses-sdk
+INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+MERGED from [:android_intent_plus] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\android_intent_plus\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:android_intent_plus] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\android_intent_plus\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:external_path] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\external_path\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:external_path] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\external_path\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_image_compress_common] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\flutter_image_compress_common\intermediates\merged_manifest\release\AndroidManifest.xml:6:5-9:55
+MERGED from [:flutter_image_compress_common] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\flutter_image_compress_common\intermediates\merged_manifest\release\AndroidManifest.xml:6:5-9:55
+MERGED from [:flutter_keyboard_visibility] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\flutter_keyboard_visibility\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_keyboard_visibility] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\flutter_keyboard_visibility\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:6:5-8:41
+MERGED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:6:5-8:41
+MERGED from [:flutter_plugin_android_lifecycle] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:fluttertoast] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\fluttertoast\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:fluttertoast] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\fluttertoast\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:geolocator_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\geolocator_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:geolocator_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\geolocator_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:6:5-8:41
+MERGED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:6:5-8:41
+MERGED from [:package_info_plus] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\package_info_plus\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:package_info_plus] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\package_info_plus\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\path_provider_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\path_provider_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\permission_handler_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\permission_handler_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:printing] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\printing\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:printing] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\printing\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\shared_preferences_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\shared_preferences_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\sqflite\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\sqflite\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:webview_flutter_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\webview_flutter_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:webview_flutter_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\webview_flutter_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-location:21.2.0] C:\Users\User-23\.gradle\caches\transforms-3\cc734f6be624a0210bfc44459063267f\transformed\jetified-play-services-location-21.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.2.0] C:\Users\User-23\.gradle\caches\transforms-3\cc734f6be624a0210bfc44459063267f\transformed\jetified-play-services-location-21.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\User-23\.gradle\caches\transforms-3\0e4993a0670d87c95390870e9aa7dca1\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\User-23\.gradle\caches\transforms-3\0e4993a0670d87c95390870e9aa7dca1\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\User-23\.gradle\caches\transforms-3\1e9a024556b2bd0f73e4a5f81d9cd65b\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\User-23\.gradle\caches\transforms-3\1e9a024556b2bd0f73e4a5f81d9cd65b\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\e636f3d88b973f5f86e7f9b63b5a5a21\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\e636f3d88b973f5f86e7f9b63b5a5a21\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\User-23\.gradle\caches\transforms-3\aa8211368f791ef90268469b33a8389b\transformed\jetified-play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\User-23\.gradle\caches\transforms-3\aa8211368f791ef90268469b33a8389b\transformed\jetified-play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\97b6ea539c4ede5de03d8240bf26c1be\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\97b6ea539c4ede5de03d8240bf26c1be\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\User-23\.gradle\caches\transforms-3\e9febbc435df7244efe72a5964cbd5f7\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\User-23\.gradle\caches\transforms-3\e9febbc435df7244efe72a5964cbd5f7\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.7.2] C:\Users\User-23\.gradle\caches\transforms-3\7b1ea3f5022e785afe4f18f83fb4ef4c\transformed\jetified-activity-1.7.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.7.2] C:\Users\User-23\.gradle\caches\transforms-3\7b1ea3f5022e785afe4f18f83fb4ef4c\transformed\jetified-activity-1.7.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.5.0] C:\Users\User-23\.gradle\caches\transforms-3\4de3f5d9a4e60046c63f8cfc1c74d72b\transformed\browser-1.5.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.5.0] C:\Users\User-23\.gradle\caches\transforms-3\4de3f5d9a4e60046c63f8cfc1c74d72b\transformed\browser-1.5.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.webkit:webkit:1.11.0] C:\Users\User-23\.gradle\caches\transforms-3\e0989c255e642e0b62d538bf4e6c169b\transformed\webkit-1.11.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.webkit:webkit:1.11.0] C:\Users\User-23\.gradle\caches\transforms-3\e0989c255e642e0b62d538bf4e6c169b\transformed\webkit-1.11.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\User-23\.gradle\caches\transforms-3\5a91cede716f5ad2c864778c5052a9ee\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\User-23\.gradle\caches\transforms-3\5a91cede716f5ad2c864778c5052a9ee\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\98fc2ac903651be95509df81bdb52d51\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\98fc2ac903651be95509df81bdb52d51\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\dd53be1a283512d5a038024c1792d674\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\dd53be1a283512d5a038024c1792d674\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\11c39b50e2cc505eac8f12b73b4e1f46\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\11c39b50e2cc505eac8f12b73b4e1f46\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\User-23\.gradle\caches\transforms-3\0c00521e3435ad31e4f84a78c649490a\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\User-23\.gradle\caches\transforms-3\0c00521e3435ad31e4f84a78c649490a\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\User-23\.gradle\caches\transforms-3\78c0ae40d57a4ba1a3e30fa9c9f3509a\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\User-23\.gradle\caches\transforms-3\78c0ae40d57a4ba1a3e30fa9c9f3509a\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\bdc4f2480dbf9dede476855e5394c3b7\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\bdc4f2480dbf9dede476855e5394c3b7\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\02a35d42c509a462c7c9c7e50694b7b0\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\02a35d42c509a462c7c9c7e50694b7b0\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\00c730b6549c08f5b9567eff2980665a\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\00c730b6549c08f5b9567eff2980665a\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\aa198b6d897cd683cb90670884e31c30\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\aa198b6d897cd683cb90670884e31c30\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\dfc43b4299d1db826bd267de78135275\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\dfc43b4299d1db826bd267de78135275\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\bc64581179bf034c8d596994d3971474\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\bc64581179bf034c8d596994d3971474\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\6748e2247f55479917c90d4d426aad50\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\6748e2247f55479917c90d4d426aad50\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\a7448a0b5c6d60296ff9f69ad5f9fc74\transformed\jetified-core-ktx-1.13.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\a7448a0b5c6d60296ff9f69ad5f9fc74\transformed\jetified-core-ktx-1.13.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\e42e73d68633e27340f5774e68bfdea7\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\e42e73d68633e27340f5774e68bfdea7\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\User-23\.gradle\caches\transforms-3\84e4b224a5c98f00f8230da2418f5dd1\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\User-23\.gradle\caches\transforms-3\84e4b224a5c98f00f8230da2418f5dd1\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\User-23\.gradle\caches\transforms-3\4f795d8b544e5d39bbbe679587c1b5b3\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\User-23\.gradle\caches\transforms-3\4f795d8b544e5d39bbbe679587c1b5b3\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\e881b800cb33989831fb4c17e6c13d2f\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\e881b800cb33989831fb4c17e6c13d2f\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\User-23\.gradle\caches\transforms-3\7626564c74b63b373f58bd972db6726b\transformed\jetified-annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\User-23\.gradle\caches\transforms-3\7626564c74b63b373f58bd972db6726b\transformed\jetified-annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.heifwriter:heifwriter:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\29496ee703f66f30b3c1dd66abf30f2d\transformed\heifwriter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.heifwriter:heifwriter:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\29496ee703f66f30b3c1dd66abf30f2d\transformed\heifwriter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] C:\Users\User-23\.gradle\caches\transforms-3\b80cd6f4ddeb1e77bfc6466ff29245f8\transformed\exifinterface-1.3.7\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] C:\Users\User-23\.gradle\caches\transforms-3\b80cd6f4ddeb1e77bfc6466ff29245f8\transformed\exifinterface-1.3.7\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\User-23\.gradle\caches\transforms-3\05ee3aba8df77e2f6aed18db588566ba\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\User-23\.gradle\caches\transforms-3\05ee3aba8df77e2f6aed18db588566ba\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\cc373aceb511ec84bba0ad645dae6e8b\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\cc373aceb511ec84bba0ad645dae6e8b\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\8819686cc138557098db56b4361e0940\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\8819686cc138557098db56b4361e0940\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\User-23\.gradle\caches\transforms-3\5b1bd84f2a8a77960b0bc6797d8cd93c\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\User-23\.gradle\caches\transforms-3\5b1bd84f2a8a77960b0bc6797d8cd93c\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\ca6fb8e868012069f778141fb971ed1b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\User-23\.gradle\caches\transforms-3\ca6fb8e868012069f778141fb971ed1b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\User-23\.gradle\caches\transforms-3\978181720c6b59594697048be529e3d6\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\User-23\.gradle\caches\transforms-3\978181720c6b59594697048be529e3d6\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [:flutter_image_compress_common] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\flutter_image_compress_common\intermediates\merged_manifest\release\AndroidManifest.xml:9:9-52
+	android:targetSdkVersion
+		INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml
+activity#up.pts.beatapp.MainActivity
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:29:5-50:16
+	android:screenOrientation
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:36:7-43
+	android:launchMode
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:32:7-37
+	android:hardwareAccelerated
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:35:7-41
+	android:windowSoftInputMode
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:37:7-49
+	android:exported
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:31:7-30
+	android:configChanges
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:34:7-157
+	android:theme
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:33:7-41
+	android:name
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:30:7-35
+meta-data#io.flutter.embedding.android.NormalTheme
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:42:7-45:9
+	android:resource
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:44:9-46
+	android:name
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:43:9-64
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:46:7-49:23
+action#android.intent.action.MAIN
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:47:9-61
+	android:name
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:47:17-58
+category#android.intent.category.LAUNCHER
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:48:9-69
+	android:name
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:48:19-66
+meta-data#flutterEmbedding
+ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:53:5-55:27
+	android:value
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:55:7-24
+	android:name
+		ADDED from E:\Kuldeep\Kuldeep\flutter_projects\beatapp\android\app\src\main\AndroidManifest.xml:54:7-38
+provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
+ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:11:9-19:20
+	android:grantUriPermissions
+		ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:15:13-47
+	android:authorities
+		ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-74
+	android:exported
+		ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-37
+	android:name
+		ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-82
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:16:13-18:75
+	android:resource
+		ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:18:17-72
+	android:name
+		ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:17:17-67
+service#com.google.android.gms.metadata.ModuleDependencies
+ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:21:9-33:19
+	android:enabled
+		ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:23:13-36
+	android:exported
+		ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:24:13-37
+	tools:ignore
+		ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:25:13-40
+	android:name
+		ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:22:13-78
+intent-filter#action:name:com.google.android.gms.metadata.MODULE_DEPENDENCIES
+ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:26:13-28:29
+action#com.google.android.gms.metadata.MODULE_DEPENDENCIES
+ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:27:17-94
+	android:name
+		ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:27:25-91
+meta-data#photopicker_activity:0:required
+ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:30:13-32:36
+	android:value
+		ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:32:17-33
+	android:name
+		ADDED from [:image_picker_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:31:17-63
+service#com.baseflow.geolocator.GeolocatorLocationService
+ADDED from [:geolocator_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\geolocator_android\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-14:56
+	android:enabled
+		ADDED from [:geolocator_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\geolocator_android\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-35
+	android:exported
+		ADDED from [:geolocator_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\geolocator_android\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-37
+	android:foregroundServiceType
+		ADDED from [:geolocator_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\geolocator_android\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-53
+	android:name
+		ADDED from [:geolocator_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\geolocator_android\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-77
+uses-permission#android.permission.READ_MEDIA_IMAGES
+ADDED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:13:5-76
+	android:name
+		ADDED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:13:22-73
+uses-permission#android.permission.READ_MEDIA_VIDEO
+ADDED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:14:5-75
+	android:name
+		ADDED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:14:22-72
+uses-permission#android.permission.READ_MEDIA_AUDIO
+ADDED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:15:5-75
+	android:name
+		ADDED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:15:22-72
+provider#com.crazecoder.openfile.FileProvider
+ADDED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:18:9-27:20
+	android:grantUriPermissions
+		ADDED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:22:13-47
+	android:authorities
+		ADDED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:20:13-88
+	android:exported
+		ADDED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:21:13-37
+	tools:replace
+		ADDED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:23:13-48
+	android:name
+		ADDED from [:open_filex] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\open_filex\intermediates\merged_manifest\release\AndroidManifest.xml:19:13-64
+provider#net.nfet.flutter.printing.PrintFileProvider
+ADDED from [:printing] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\printing\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-18:20
+	android:grantUriPermissions
+		ADDED from [:printing] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\printing\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-47
+	android:authorities
+		ADDED from [:printing] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\printing\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-68
+	android:exported
+		ADDED from [:printing] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\printing\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-37
+	android:name
+		ADDED from [:printing] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\printing\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-71
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-13:74
+	android:exported
+		ADDED from [:url_launcher_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [:url_launcher_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-71
+	android:name
+		ADDED from [:url_launcher_android] E:\Kuldeep\Kuldeep\flutter_projects\beatapp\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-74
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\e636f3d88b973f5f86e7f9b63b5a5a21\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\e636f3d88b973f5f86e7f9b63b5a5a21\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\e636f3d88b973f5f86e7f9b63b5a5a21\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\e636f3d88b973f5f86e7f9b63b5a5a21\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\97b6ea539c4ede5de03d8240bf26c1be\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\97b6ea539c4ede5de03d8240bf26c1be\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\User-23\.gradle\caches\transforms-3\97b6ea539c4ede5de03d8240bf26c1be\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\11c39b50e2cc505eac8f12b73b4e1f46\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\00c730b6549c08f5b9567eff2980665a\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\00c730b6549c08f5b9567eff2980665a\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\User-23\.gradle\caches\transforms-3\05ee3aba8df77e2f6aed18db588566ba\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\User-23\.gradle\caches\transforms-3\05ee3aba8df77e2f6aed18db588566ba\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\11c39b50e2cc505eac8f12b73b4e1f46\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\11c39b50e2cc505eac8f12b73b4e1f46\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\11c39b50e2cc505eac8f12b73b4e1f46\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\11c39b50e2cc505eac8f12b73b4e1f46\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\11c39b50e2cc505eac8f12b73b4e1f46\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\11c39b50e2cc505eac8f12b73b4e1f46\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User-23\.gradle\caches\transforms-3\11c39b50e2cc505eac8f12b73b4e1f46\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\User-23\.gradle\caches\transforms-3\0c00521e3435ad31e4f84a78c649490a\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\User-23\.gradle\caches\transforms-3\0c00521e3435ad31e4f84a78c649490a\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\User-23\.gradle\caches\transforms-3\0c00521e3435ad31e4f84a78c649490a\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\User-23\.gradle\caches\transforms-3\0c00521e3435ad31e4f84a78c649490a\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\User-23\.gradle\caches\transforms-3\0c00521e3435ad31e4f84a78c649490a\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\User-23\.gradle\caches\transforms-3\0c00521e3435ad31e4f84a78c649490a\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\00c730b6549c08f5b9567eff2980665a\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\00c730b6549c08f5b9567eff2980665a\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\User-23\.gradle\caches\transforms-3\00c730b6549c08f5b9567eff2980665a\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+permission#up.pts.beatapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+uses-permission#up.pts.beatapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\User-23\.gradle\caches\transforms-3\acfaca1f2c57c4c45b2b8d9082864b3d\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User-23\.gradle\caches\transforms-3\cf42d6760d5ff3522df29da3b085d71c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
