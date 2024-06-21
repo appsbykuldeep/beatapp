@@ -42,17 +42,15 @@ class District {
 
   static Future<List<District>> getAllDistrict() async {
     List<District> lst = [];
-    AssetDbHelper helper = AssetDbHelper();
-    await helper.openDataBaseConnection();
-    if (helper.initialized) {
-      String query =
-          '''SELECT m_district.DISTRICT,m_district.DISTRICT_CD from m_district''';
-      var data = await helper.db!.rawQuery(query);
-      for (int i = 0; i < data.length; i++) {
-        lst.add(District(
-            districtCD: data[i]["DISTRICT_CD"].toString(),
-            district: data[i]["DISTRICT"].toString()));
-      }
+    String query =
+        '''SELECT m_district.DISTRICT,m_district.DISTRICT_CD from m_district''';
+
+    var data = await AssetDbHelper.runQuery(query);
+
+    for (int i = 0; i < data.length; i++) {
+      lst.add(District(
+          districtCD: data[i]["DISTRICT_CD"].toString(),
+          district: data[i]["DISTRICT"].toString()));
     }
     return lst;
   }

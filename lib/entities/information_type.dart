@@ -24,16 +24,13 @@ class InformationType {
 
   static Future<List<InformationType>> getInfoTypeList() async {
     List<InformationType> lst = [];
-    AssetDbHelper helper = AssetDbHelper();
-    await helper.openDataBaseConnection();
-    if (helper.initialized) {
-      String query = '''SELECT M_INFORMATION_TYPE.INFORMATION_TYPE,
+    String query = '''SELECT M_INFORMATION_TYPE.INFORMATION_TYPE,
           M_INFORMATION_TYPE.INFORM_CD FROM M_INFORMATION_TYPE''';
-      var data = await helper.db!.rawQuery(query);
-      for (int i = 0; i < data.length; i++) {
-        lst.add(InformationType(data[i]["INFORMATION_TYPE"].toString(),
-            data[i]["INFORM_CD"].toString()));
-      }
+
+    var data = await AssetDbHelper.runQuery(query);
+    for (int i = 0; i < data.length; i++) {
+      lst.add(InformationType(data[i]["INFORMATION_TYPE"].toString(),
+          data[i]["INFORM_CD"].toString()));
     }
     return lst;
   }

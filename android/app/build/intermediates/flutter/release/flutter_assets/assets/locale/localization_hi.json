@@ -16,6 +16,7 @@
   "error_in_case_submission": "कुछ त्रुटि के कारण CASE आवंटित नहीं किया जा सका",
   "select_date_of_execution": "निष्पादित किये जाने की दिनांक चुनें",
   "select_type_of_execution": "निष्पादन के प्रकार चुनें",
+  "select_relation_type": "संबंध प्रकार चुनें",
   "fill_summon_reciever": "\"उस व्यक्ति का नाम जिसे सम्मन सौंपा गया है\" भरें",
   "logout_confirmation": "क्या आप लॉगआउट करना चाहते हैं?",
   "remark_is_compulsory": "टिप्पणी भरना अनिवार्य हैं",

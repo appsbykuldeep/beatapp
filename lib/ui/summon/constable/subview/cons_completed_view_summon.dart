@@ -5,12 +5,14 @@ import 'dart:async';
 import 'package:beatapp/api/api_connection.dart' as HttpRequst;
 import 'package:beatapp/api/api_end_point.dart';
 import 'package:beatapp/base_statefull.dart';
+import 'package:beatapp/constants/enums/summon_detail_type_enum.dart';
 import 'package:beatapp/custom_view/custom_view.dart';
 import 'package:beatapp/localization/app_translations.dart';
 import 'package:beatapp/model/response/login_response.dart';
 import 'package:beatapp/model/response/summon_response.dart';
 import 'package:beatapp/ui/dialog/dialog_helper.dart';
 import 'package:beatapp/ui/summon/summon_detail_view.dart';
+import 'package:beatapp/utility/extentions/context_ext.dart';
 import 'package:beatapp/utility/message_utility.dart';
 import 'package:beatapp/utility/resource_provider.dart';
 import 'package:flutter/material.dart';
@@ -363,13 +365,10 @@ class _ConsCompletedFragment_SummonState
     var data = _lstSummon[index];
     return InkWell(
         onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => SummonDetailActivity(
-                  data: {"SUMM_WARR_NUM": data.SUMM_WARR_NUM},
-                ),
-              ));
+          context.push(SummonDetailActivity(
+            SUMM_WARR_NUM: data.SUMM_WARR_NUM,
+            detailType: SummonDetailType.completed,
+          ));
         },
         child: Container(
           margin: const EdgeInsets.only(top: 5, right: 1),

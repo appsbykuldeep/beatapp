@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:beatapp/constants/enums/app_user_type_enum.dart';
 import 'package:beatapp/model/login_response.dart';
 import 'package:beatapp/model/offices_response.dart';
 import 'package:beatapp/preferences/preference_util.dart';
@@ -21,6 +22,22 @@ class AppUser {
   static String get OFFICE_Name => user.officeName;
   static String get APP_VERSION_CODE => buildDetails.buildNumber;
   static String get PERSON_NAME => user.personName;
+
+  static AppUserType get appUserType => switch (int.tryParse(ROLE_CD)) {
+        null => AppUserType.other,
+        2 => AppUserType.sho,
+        3 => AppUserType.invitigativeOfficer,
+        4 => AppUserType.eo,
+        11 => AppUserType.co,
+        12 => AppUserType.liu,
+        13 => AppUserType.dcrb,
+        16 => AppUserType.sp,
+        17 => AppUserType.sp,
+        23 => AppUserType.headConst,
+        // Officer
+        (18 || 19 || 24 || 25 || 26 || 34 || 37 || 101) => AppUserType.officer,
+        _ => AppUserType.other,
+      };
 
   static Future<void> setBuildDetails() async {
     buildDetails = await BuildUtils.getappBuild();

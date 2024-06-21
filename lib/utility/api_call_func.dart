@@ -66,6 +66,8 @@ Future<ApiResponse> dioApiCall({
     cancelToke = null;
     responsemodel.statusCode = dioResponse.statusCode ?? 0;
     responsemodel.resultMsj = errorMsjBucode(dioResponse.statusCode ?? 404);
+    print(dioResponse.statusCode);
+    print(dioResponse.data);
 
     if (dioResponse.statusCode == 200) {
       responsemodel.resultStatus = true;

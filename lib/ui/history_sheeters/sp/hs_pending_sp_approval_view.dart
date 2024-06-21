@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:beatapp/api/api_end_point.dart';
 import 'package:beatapp/api/api_connection.dart' as HttpRequst;
+import 'package:beatapp/api/api_end_point.dart';
 import 'package:beatapp/custom_view/custom_view.dart';
 import 'package:beatapp/entities/police_station.dart';
 import 'package:beatapp/localization/app_translations.dart';
@@ -38,7 +38,7 @@ class _HSPendingSPApprovalActivityState
 
   void getPSList() async {
     var userData = await LoginResponseModel.fromPreference();
-    district = userData.district ?? "";
+    district = userData.district;
     var lst = await PoliceStation.searchPS(userData.districtCD);
     dropdownValuePS = getTranlateString("select");
     spinnerItemsPS = [dropdownValuePS];

@@ -3,6 +3,7 @@ import 'package:beatapp/localization/app_translations.dart';
 import 'package:beatapp/ui/summon/sho/subview/completed_view.dart';
 import 'package:beatapp/ui/summon/sho/subview/pending_view.dart';
 import 'package:beatapp/ui/summon/sho/subview/unassigned_view.dart';
+import 'package:beatapp/utility/extentions/context_ext.dart';
 import 'package:beatapp/utility/extentions/int_ext.dart';
 import 'package:beatapp/utility/resource_provider.dart';
 import 'package:flutter/material.dart';
@@ -48,11 +49,7 @@ class _SummonActivityState extends State<SummonActivity> {
             InkWell(
               onTap: () {
                 selectedTab = 0;
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => getSelectedView(),
-                    ));
+                context.push(getSelectedView());
               },
               child: const TotalPendingCompletedItem(
                 title: "TOTAL LIST",
@@ -63,11 +60,7 @@ class _SummonActivityState extends State<SummonActivity> {
             InkWell(
               onTap: () {
                 selectedTab = 1;
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => getSelectedView(),
-                    ));
+                context.push(getSelectedView());
               },
               child: const TotalPendingCompletedItem(
                 title: "PENDING",
@@ -78,11 +71,7 @@ class _SummonActivityState extends State<SummonActivity> {
             InkWell(
               onTap: () {
                 selectedTab = 2;
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => getSelectedView(),
-                    ));
+                context.push(getSelectedView());
               },
               child: const TotalPendingCompletedItem(
                 title: "ENQUIRY COMPLETED",
@@ -134,7 +123,7 @@ class _SummonActivityState extends State<SummonActivity> {
     );*/
   }
 
-  dynamic getSelectedView() {
+  Widget getSelectedView() {
     if (selectedTab == 0) {
       return UnassignedFragment(
         data: {"title": title},

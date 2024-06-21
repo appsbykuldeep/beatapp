@@ -36,10 +36,8 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   bool _isPassword = false;
   String _responseOTP = "";
-  final TextEditingController _con_MobileNo =
-      TextEditingController(text: kDebugMode ? '7839858252' : '');
-  final TextEditingController _con_Password =
-      TextEditingController(text: kDebugMode ? 'sot@123' : '');
+  final TextEditingController _con_MobileNo = TextEditingController();
+  final TextEditingController _con_Password = TextEditingController();
   final TextEditingController _con_OtpBox1 = TextEditingController();
   final TextEditingController _con_OtpBox2 = TextEditingController();
   final TextEditingController _con_OtpBox3 = TextEditingController();
@@ -54,9 +52,26 @@ class _LoginState extends State<Login> {
   Beat const :: 7839858252 :: Otp login
 
   SP  :: 9454400305 :: spsdr@3051
+
+  9454404315
   
   81159 55084
+
+
+Testing OTP - 0123
+
    */
+
+  void debugSetup() {
+    if (!kDebugMode) return;
+    _con_MobileNo.text = "9454404315";
+    _con_Password.text = "sot@123";
+    if (EndPoints.isLiveApk) return;
+    _con_OtpBox1.text = "0";
+    _con_OtpBox2.text = "1";
+    _con_OtpBox3.text = "2";
+    _con_OtpBox4.text = "3";
+  }
 
   @override
   void dispose() {
@@ -67,6 +82,7 @@ class _LoginState extends State<Login> {
   @override
   void initState() {
     super.initState();
+    debugSetup();
     getBuildDetails();
     PermissionHelper().permission();
   }

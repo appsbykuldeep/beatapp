@@ -28,7 +28,7 @@ class _ProfileViewState extends State<ProfileView> {
     LoginResponseModel response = await LoginResponseModel.fromPreference();
 
     _name = response.personName.toString();
-    _rank = response.officerRank!;
+    _rank = response.officerRank;
     _officeName = AppUser.OFFICE_Name;
     _officeType = AppUser.OFFICE_TYPE;
 

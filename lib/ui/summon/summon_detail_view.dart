@@ -1,19 +1,47 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:beatapp/api/api_connection.dart' as HttpRequst;
 import 'package:beatapp/api/api_end_point.dart';
+import 'package:beatapp/classes/app_user.dart';
+import 'package:beatapp/constants/enums/app_user_type_enum.dart';
+import 'package:beatapp/constants/enums/summon_detail_type_enum.dart';
+import 'package:beatapp/custom_view/custom_dropdown_wid.dart';
 import 'package:beatapp/custom_view/image_viewer.dart';
+import 'package:beatapp/database/asset_db_helper.dart';
+import 'package:beatapp/entities/relation_type.dart';
+import 'package:beatapp/entities/warrant_exec_type.dart';
 import 'package:beatapp/localization/app_translations.dart';
 import 'package:beatapp/model/response/summon_detail_response.dart';
+import 'package:beatapp/utility/api_call_func.dart';
 import 'package:beatapp/utility/base64_utility.dart';
+import 'package:beatapp/utility/camera_and_file_provider.dart';
+import 'package:beatapp/utility/extentions/context_ext.dart';
+import 'package:beatapp/utility/extentions/int_ext.dart';
+import 'package:beatapp/utility/extentions/string_ext.dart';
+import 'package:beatapp/utility/extentions/textediting_ctrl_ext.dart';
+import 'package:beatapp/utility/get_lang_code.dart';
+import 'package:beatapp/utility/loaction_utils.dart';
 import 'package:beatapp/utility/message_utility.dart';
 import 'package:beatapp/utility/navigator_utils.dart';
 import 'package:beatapp/utility/resource_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:get/get.dart';
+
+part 'submit_summon_details.dart';
 
 class SummonDetailActivity extends StatefulWidget {
-  final Map<String, String?> data;
+  // final Map<String, String?> data;
+  final String SUMM_WARR_NUM;
+  final SummonDetailType detailType;
 
-  const SummonDetailActivity({Key? key, required this.data}) : super(key: key);
+  const SummonDetailActivity({
+    Key? key,
+    required this.SUMM_WARR_NUM,
+    required this.detailType,
+  }) : super(key: key);
 
   @override
   State<SummonDetailActivity> createState() => _SummonDetailActivityState();
@@ -21,7 +49,7 @@ class SummonDetailActivity extends StatefulWidget {
 
 class _SummonDetailActivityState extends State<SummonDetailActivity> {
   SummonDetailResponse? _summon;
-  String SUMM_WARR_NUM = "";
+  AppUserType appUserType = AppUserType.other;
 
   String getTranlateString(String key) {
     return AppTranslations.of(context)!.text(key);
@@ -29,7 +57,9 @@ class _SummonDetailActivityState extends State<SummonDetailActivity> {
 
   @override
   void initState() {
-    SUMM_WARR_NUM = widget.data["SUMM_WARR_NUM"] ?? "";
+    appUserType = AppUser.appUserType;
+
+    // SUMM_WARR_NUM = widget.data["SUMM_WARR_NUM"] ?? "";
     super.initState();
     SchedulerBinding.instance.addPostFrameCallback((_) {
       _getSummonDetails();
@@ -38,7 +68,7 @@ class _SummonDetailActivityState extends State<SummonDetailActivity> {
 
   void _getSummonDetails() async {
     var data = {
-      "SUMM_WARR_NUM": SUMM_WARR_NUM,
+      "SUMM_WARR_NUM": widget.SUMM_WARR_NUM,
       "TYPE": EndPoints.TYPE,
     };
     var response = await HttpRequst.postRequestWithTokenAndBody(
@@ -506,6 +536,12 @@ class _SummonDetailActivityState extends State<SummonDetailActivity> {
                           ),
                         ),
                       ),
+                      if (widget.detailType.isPending)
+                        SubmitSummonDetails(
+                          key: ValueKey(widget.SUMM_WARR_NUM),
+                          SUMM_WARR_NUM: widget.SUMM_WARR_NUM,
+                          SUMM_WARR_NATURE: 1,
+                        ),
                     ],
                   ),
                 ),

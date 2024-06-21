@@ -1,0 +1,22 @@
+final relationTypesMapData = [
+  {"RELATION_TYPE_CD": 2, "LANG_CD": 6, "RELATION_TYPE": "बहन"},
+  {"RELATION_TYPE_CD": 2, "LANG_CD": 99, "RELATION_TYPE": "Sister"},
+  {"RELATION_TYPE_CD": 3, "LANG_CD": 6, "RELATION_TYPE": "पड़ोसी"},
+  {"RELATION_TYPE_CD": 3, "LANG_CD": 99, "RELATION_TYPE": "Neighbour"},
+  {"RELATION_TYPE_CD": 5, "LANG_CD": 6, "RELATION_TYPE": "पिता"},
+  {"RELATION_TYPE_CD": 5, "LANG_CD": 99, "RELATION_TYPE": "Father"},
+  {"RELATION_TYPE_CD": 6, "LANG_CD": 6, "RELATION_TYPE": "मां"},
+  {"RELATION_TYPE_CD": 6, "LANG_CD": 99, "RELATION_TYPE": "Mother"},
+  {"RELATION_TYPE_CD": 7, "LANG_CD": 6, "RELATION_TYPE": "अभिभावक"},
+  {"RELATION_TYPE_CD": 7, "LANG_CD": 99, "RELATION_TYPE": "Guardian"},
+  {"RELATION_TYPE_CD": 8, "LANG_CD": 6, "RELATION_TYPE": "पति"},
+  {"RELATION_TYPE_CD": 8, "LANG_CD": 99, "RELATION_TYPE": "Husband"},
+  {"RELATION_TYPE_CD": 9, "LANG_CD": 6, "RELATION_TYPE": "पत्नी"},
+  {"RELATION_TYPE_CD": 9, "LANG_CD": 99, "RELATION_TYPE": "Wife"},
+  {"RELATION_TYPE_CD": 11, "LANG_CD": 6, "RELATION_TYPE": "बेटा"},
+  {"RELATION_TYPE_CD": 11, "LANG_CD": 99, "RELATION_TYPE": "Son"},
+  {"RELATION_TYPE_CD": 12, "LANG_CD": 6, "RELATION_TYPE": "बेटी"},
+  {"RELATION_TYPE_CD": 12, "LANG_CD": 99, "RELATION_TYPE": "Daughter"},
+  {"RELATION_TYPE_CD": 13, "LANG_CD": 6, "RELATION_TYPE": "भाई"},
+  {"RELATION_TYPE_CD": 13, "LANG_CD": 99, "RELATION_TYPE": "Brother"}
+];

@@ -96,6 +96,7 @@
   "from_date": "From date",
   "to_date": "To date",
   "select": "Select",
+  "select_relation_type": "Select Relation Type",
   "name": "Name",
   "user_name": "Name",
   "father_name": "Father Name",

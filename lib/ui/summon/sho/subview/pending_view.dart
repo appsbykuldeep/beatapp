@@ -1,12 +1,14 @@
 import 'package:beatapp/api/api_connection.dart' as HttpRequst;
 import 'package:beatapp/api/api_end_point.dart';
 import 'package:beatapp/classes/app_user.dart';
+import 'package:beatapp/constants/enums/summon_detail_type_enum.dart';
 import 'package:beatapp/custom_view/custom_view.dart';
 import 'package:beatapp/localization/app_translations.dart';
 import 'package:beatapp/model/response/summon_response.dart';
 import 'package:beatapp/preferences/preference_util.dart';
 import 'package:beatapp/ui/dialog/dialog_helper.dart';
 import 'package:beatapp/ui/summon/summon_detail_view.dart';
+import 'package:beatapp/utility/extentions/context_ext.dart';
 import 'package:beatapp/utility/extentions/string_ext.dart';
 import 'package:beatapp/utility/extentions/widget_ext.dart';
 import 'package:beatapp/utility/message_utility.dart';
@@ -40,6 +42,8 @@ class _PendingFragmentState extends State<PendingFragment> {
   }
 
   Future<void> _getUnAssignedList() async {
+    _lstSummon = [];
+    lstSummonAll = [];
     var pscd = AppUser.PS_CD;
     var data = {
       "PS_CD": pscd,
@@ -206,14 +210,17 @@ class _PendingFragmentState extends State<PendingFragment> {
   Widget getRowForConst(int index) {
     var data = _lstSummon[index];
     return InkWell(
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => SummonDetailActivity(
-                  data: {"SUMM_WARR_NUM": data.SUMM_WARR_NUM},
-                ),
-              ));
+        onTap: () async {
+          final result = await context.push(
+            SummonDetailActivity(
+              SUMM_WARR_NUM: data.SUMM_WARR_NUM,
+              detailType: SummonDetailType.pending,
+            ),
+          );
+
+          if (result is bool && result) {
+            _getUnAssignedList();
+          }
         },
         child: Container(
           margin: const EdgeInsets.only(top: 5, right: 1),
@@ -247,7 +254,7 @@ class _PendingFragmentState extends State<PendingFragment> {
                 flex: 2,
                 child: Container(
                   alignment: Alignment.center,
-                  child: Text(data.ASSIGNED_ON , maxLines: 2),
+                  child: Text(data.ASSIGNED_ON, maxLines: 2),
                 ),
               ),
               Expanded(
@@ -261,14 +268,14 @@ class _PendingFragmentState extends State<PendingFragment> {
                 flex: 2,
                 child: Container(
                   alignment: Alignment.center,
-                  child: Text(data.ASSIGNED_TO_RANK , maxLines: 2),
+                  child: Text(data.ASSIGNED_TO_RANK, maxLines: 2),
                 ),
               ),
               Expanded(
                 flex: 2,
                 child: Container(
                   alignment: Alignment.center,
-                  child: Text(data.COMPLETION_DATE , maxLines: 2),
+                  child: Text(data.COMPLETION_DATE, maxLines: 2),
                 ),
               ),
             ],

@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:beatapp/classes/app_user.dart';
 import 'package:beatapp/constants/app_theme.dart';
+import 'package:beatapp/database/asset_db_helper.dart';
 import 'package:beatapp/ui/splash_screen.dart';
 import 'package:beatapp/utility/navigation_service.dart';
 import 'package:flutter/material.dart';
@@ -36,6 +37,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   client = await getSSLPinningClient();
   await AppUser.setBuildDetails();
+  await AssetDbHelper.createDB();
   runApp(const MyApp());
 }
 

@@ -44,17 +44,17 @@ class _AreaReportActivityState extends State<AreaReportActivity> {
     var userData = await LoginResponseModel.fromPreference();
     psName = getTranlateString("all");
     psId = "";
-    psList = await PoliceStation.searchPS(userData.districtCD!);
+    psList = await PoliceStation.searchPS(userData.districtCD);
     psList.insert(0, PoliceStation(psId, psName));
     setState(() {});
   }
 
   void _getHSList() async {
     var userData = await LoginResponseModel.fromPreference();
-    districtName = userData.district ?? "";
+    districtName = userData.district;
     if (role != "16" && role != "17") {
-      psId = userData.psCd ?? "";
-      psName = userData.ps ?? "";
+      psId = userData.psCd;
+      psName = userData.ps;
     }
     var data = {"DISTRICT_CD": userData.districtCD, "PS_CD": psId};
     var response = await HttpRequst.postRequestWithTokenAndBody(

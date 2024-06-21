@@ -1,6 +1,5 @@
 import 'package:beatapp/base_statefull.dart';
 import 'package:beatapp/classes/app_user.dart';
-import 'package:beatapp/database/asset_db_helper.dart';
 import 'package:beatapp/localization/app_translations.dart';
 import 'package:beatapp/localization/application.dart';
 import 'package:beatapp/model/choice.dart';
@@ -51,6 +50,7 @@ import 'package:beatapp/ui/tenant/sp/subview/pending_view_tenant_sp.dart';
 import 'package:beatapp/ui/weapon_verification/constable/weapon_verification_view_constable.dart';
 import 'package:beatapp/ui/weapon_verification/eo/weapon_verification_view_eo_main.dart';
 import 'package:beatapp/ui/weapon_verification/sho/subMenu/weapon_sub_menu_sho_view.dart';
+import 'package:beatapp/utility/extentions/context_ext.dart';
 import 'package:beatapp/utility/extentions/int_ext.dart';
 import 'package:beatapp/utility/resource_provider.dart';
 import 'package:flutter/material.dart';
@@ -86,7 +86,6 @@ class _DashboardState extends BaseFullState<Dashboard> {
   void initState() {
     super.initState();
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      await AssetDbHelper().createDB();
       await getDashBoardCount();
     });
   }
@@ -350,7 +349,7 @@ class _DashboardState extends BaseFullState<Dashboard> {
     );
   }
 
-  void openView(Choice choice) {
+  void openView(Choice choice) async {
     int id = choice.id;
     print("id $id");
     print("role $role");
@@ -464,11 +463,7 @@ class _DashboardState extends BaseFullState<Dashboard> {
 
     if (page == null) return;
 
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => page!,
-        ));
+    context.push(page);
   }
 
   void showLanguageDialog(BuildContext context) {

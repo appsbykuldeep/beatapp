@@ -35,12 +35,12 @@ class PoliceStation {
 
   static Future<List<PoliceStation>> searchPS(String distID) async {
     List<PoliceStation> lst = [];
-    AssetDbHelper helper = AssetDbHelper();
-    await helper.openDataBaseConnection();
-    if (helper.initialized) {
+
+    await AssetDbHelper.openDataBaseConnection();
+    if (AssetDbHelper.initialized) {
       String query = '''select m_police_station.PS,m_police_station.PS_CD 
       from m_police_station where m_police_station.DISTRICT_CD = $distID''';
-      var data = await helper.db!.rawQuery(query);
+      var data = await AssetDbHelper.db!.rawQuery(query);
       for (int i = 0; i < data.length; i++) {
         lst.add(PoliceStation(
             data[i]["PS_CD"].toString(), data[i]["PS"].toString()));
