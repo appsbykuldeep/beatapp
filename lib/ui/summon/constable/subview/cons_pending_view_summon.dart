@@ -18,8 +18,14 @@ import 'package:flutter/scheduler.dart';
 
 class ConsPendingFragment_Summon extends StatefulWidget {
   final Map<String, String?> data;
-  const ConsPendingFragment_Summon({Key? key, required this.data})
-      : super(key: key);
+
+  /// 1 for summon 2 for warrant
+  final int SUMM_WARR_NATURE;
+  const ConsPendingFragment_Summon({
+    Key? key,
+    required this.data,
+    required this.SUMM_WARR_NATURE,
+  }) : super(key: key);
 
   @override
   State<ConsPendingFragment_Summon> createState() =>
@@ -47,7 +53,7 @@ class _ConsPendingFragment_SummonState
     var userData = await LoginResponseModel.fromPreference();
     var data = {
       "PS_CD": userData.psCd,
-      "SUMM_WARR_NATURE": title.toLowerCase() == "summon" ? 1 : 2
+      "SUMM_WARR_NATURE": widget.SUMM_WARR_NATURE,
     };
     var response = await HttpRequst.postRequestWithTokenAndBody(
         context, EndPoints.PENDING_SUMMON_BEAT, data, true);
@@ -361,6 +367,7 @@ class _ConsPendingFragment_SummonState
           final result = await context.push(SummonDetailActivity(
             SUMM_WARR_NUM: data.SUMM_WARR_NUM,
             detailType: SummonDetailType.pending,
+            SUMM_WARR_NATURE: widget.SUMM_WARR_NATURE,
           ));
 
           if (result is bool && result) {

@@ -351,6 +351,7 @@ class _DashboardState extends BaseFullState<Dashboard> {
 
   void openView(Choice choice) async {
     int id = choice.id;
+    print("choice $choice");
     print("id $id");
     print("role $role");
     Widget? page;
@@ -367,13 +368,20 @@ class _DashboardState extends BaseFullState<Dashboard> {
     } else if (id == 6) {
       page = ArrestListActivity(data: {"role": role});
     } else if (id == 7) {
+      final SUMM_WARR_NATURE = choice.title == "summon" ? 1 : 2;
       if (role == "23") {
-        page = ConsSummonActivity(data: {
-          "role": role,
-          "title": choice.title,
-        });
+        page = ConsSummonActivity(
+          data: {
+            "role": role,
+            "title": choice.title,
+          },
+          SUMM_WARR_NATURE: SUMM_WARR_NATURE,
+        );
       } else {
-        page = SummonActivity(data: {"role": role, "title": choice.title});
+        page = SummonActivity(
+          data: {"role": role, "title": choice.title},
+          SUMM_WARR_NATURE: SUMM_WARR_NATURE,
+        );
       }
     } else if (id == 8) {
       if (role == "23") {

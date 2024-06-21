@@ -1,46 +1,34 @@
-import 'dart:convert';
-import 'dart:io';
-
 import 'package:beatapp/api/api_connection.dart' as HttpRequst;
 import 'package:beatapp/api/api_end_point.dart';
 import 'package:beatapp/classes/app_user.dart';
 import 'package:beatapp/constants/enums/app_user_type_enum.dart';
 import 'package:beatapp/constants/enums/summon_detail_type_enum.dart';
-import 'package:beatapp/custom_view/custom_dropdown_wid.dart';
 import 'package:beatapp/custom_view/image_viewer.dart';
-import 'package:beatapp/database/asset_db_helper.dart';
-import 'package:beatapp/entities/relation_type.dart';
-import 'package:beatapp/entities/warrant_exec_type.dart';
 import 'package:beatapp/localization/app_translations.dart';
 import 'package:beatapp/model/response/summon_detail_response.dart';
-import 'package:beatapp/utility/api_call_func.dart';
+import 'package:beatapp/ui/summon/submit_summon_details.dart';
 import 'package:beatapp/utility/base64_utility.dart';
-import 'package:beatapp/utility/camera_and_file_provider.dart';
 import 'package:beatapp/utility/extentions/context_ext.dart';
-import 'package:beatapp/utility/extentions/int_ext.dart';
 import 'package:beatapp/utility/extentions/string_ext.dart';
-import 'package:beatapp/utility/extentions/textediting_ctrl_ext.dart';
-import 'package:beatapp/utility/get_lang_code.dart';
-import 'package:beatapp/utility/loaction_utils.dart';
 import 'package:beatapp/utility/message_utility.dart';
 import 'package:beatapp/utility/navigator_utils.dart';
 import 'package:beatapp/utility/resource_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:geolocator/geolocator.dart';
-import 'package:get/get.dart';
-
-part 'submit_summon_details.dart';
 
 class SummonDetailActivity extends StatefulWidget {
   // final Map<String, String?> data;
   final String SUMM_WARR_NUM;
   final SummonDetailType detailType;
 
+  /// 1 for summon 2 for warrant
+  final int SUMM_WARR_NATURE;
+
   const SummonDetailActivity({
     Key? key,
     required this.SUMM_WARR_NUM,
     required this.detailType,
+    required this.SUMM_WARR_NATURE,
   }) : super(key: key);
 
   @override
@@ -67,6 +55,7 @@ class _SummonDetailActivityState extends State<SummonDetailActivity> {
   }
 
   void _getSummonDetails() async {
+    _summon = null;
     var data = {
       "SUMM_WARR_NUM": widget.SUMM_WARR_NUM,
       "TYPE": EndPoints.TYPE,
@@ -80,13 +69,14 @@ class _SummonDetailActivityState extends State<SummonDetailActivity> {
     if (response.statusCode == 200) {
       try {
         _summon = SummonDetailResponse.fromJson(response.data);
-        setState(() {});
       } catch (e) {
         e.toString();
       }
     } else {
       MessageUtility.showToast(context, response.data!.toString());
     }
+
+    setState(() {});
   }
 
   @override
@@ -94,9 +84,32 @@ class _SummonDetailActivityState extends State<SummonDetailActivity> {
     return Scaffold(
         backgroundColor: Color(ColorProvider.color_window_bg),
         appBar: AppBar(
-          title: Text(getTranlateString("summon_details")),
+          title: Text((widget.SUMM_WARR_NATURE == 1
+                  ? "summon_details"
+                  : "warrant_details")
+              .translation),
           backgroundColor: Color(ColorProvider.colorPrimary),
         ),
+        floatingActionButton:
+            (widget.SUMM_WARR_NATURE == 1 && widget.detailType.isPending)
+                ? FloatingActionButton.extended(
+                    onPressed: () async {
+                      final result = await context.push(
+                        SubmitSummonDetails(
+                          key: ValueKey(widget.SUMM_WARR_NUM),
+                          SUMM_WARR_NUM: widget.SUMM_WARR_NUM,
+                          SUMM_WARR_NATURE: widget.SUMM_WARR_NATURE,
+                        ),
+                      );
+
+                      if (result is bool && result) {
+                        _getSummonDetails();
+                      }
+                    },
+                    label: const Text("Add"),
+                    icon: const Icon(Icons.add),
+                  )
+                : null,
         body: _summon != null
             ? SingleChildScrollView(
                 child: Container(
@@ -536,12 +549,6 @@ class _SummonDetailActivityState extends State<SummonDetailActivity> {
                           ),
                         ),
                       ),
-                      if (widget.detailType.isPending)
-                        SubmitSummonDetails(
-                          key: ValueKey(widget.SUMM_WARR_NUM),
-                          SUMM_WARR_NUM: widget.SUMM_WARR_NUM,
-                          SUMM_WARR_NATURE: 1,
-                        ),
                     ],
                   ),
                 ),

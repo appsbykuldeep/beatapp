@@ -18,9 +18,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
 class PendingFragment extends StatefulWidget {
-  final Map<String, String> data;
-
-  const PendingFragment({Key? key, required this.data}) : super(key: key);
+  final String title;
+  final int SUMM_WARR_NATURE;
+  const PendingFragment({
+    Key? key,
+    required this.title,
+    required this.SUMM_WARR_NATURE,
+  }) : super(key: key);
 
   @override
   State<PendingFragment> createState() => _PendingFragmentState();
@@ -29,12 +33,11 @@ class PendingFragment extends StatefulWidget {
 class _PendingFragmentState extends State<PendingFragment> {
   List<SummonResponse> _lstSummon = [];
   List<SummonResponse> lstSummonAll = [];
-  String title = "";
+
   final pref = PreferenceHelper();
 
   @override
   void initState() {
-    title = widget.data["title"] ?? "";
     super.initState();
     SchedulerBinding.instance.addPostFrameCallback((_) {
       _getUnAssignedList();
@@ -47,7 +50,7 @@ class _PendingFragmentState extends State<PendingFragment> {
     var pscd = AppUser.PS_CD;
     var data = {
       "PS_CD": pscd,
-      "SUMM_WARR_NATURE": title == "summon" ? 1 : 2,
+      "SUMM_WARR_NATURE": widget.SUMM_WARR_NATURE,
     };
     /*final res=await callApi(endPoint: EndPoints.PENDING_SUMMON,request: data);
     print(res.body);
@@ -89,7 +92,7 @@ class _PendingFragmentState extends State<PendingFragment> {
         backgroundColor: Color(ColorProvider.color_window_bg),
         appBar: AppBar(
           foregroundColor: Colors.white,
-          title: Text(getTranlateString(title)),
+          title: Text(getTranlateString(widget.title)),
           backgroundColor: Color(ColorProvider.colorPrimary),
         ),
         body: Container(
@@ -215,6 +218,7 @@ class _PendingFragmentState extends State<PendingFragment> {
             SummonDetailActivity(
               SUMM_WARR_NUM: data.SUMM_WARR_NUM,
               detailType: SummonDetailType.pending,
+              SUMM_WARR_NATURE: widget.SUMM_WARR_NATURE,
             ),
           );
 

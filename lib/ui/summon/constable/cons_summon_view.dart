@@ -10,7 +10,14 @@ import 'package:flutter/material.dart';
 class ConsSummonActivity extends StatefulWidget {
   final Map<String, String?> data;
 
-  const ConsSummonActivity({Key? key, required this.data}) : super(key: key);
+  /// 1 for summon 2 for warrant
+  final int SUMM_WARR_NATURE;
+
+  const ConsSummonActivity({
+    Key? key,
+    required this.data,
+    required this.SUMM_WARR_NATURE,
+  }) : super(key: key);
 
   @override
   State<ConsSummonActivity> createState() => _ConsSummonActivityState();
@@ -85,12 +92,16 @@ class _ConsSummonActivityState extends BaseFullState<ConsSummonActivity> {
 
   dynamic getSelectedView() {
     if (selectedTab == 0) {
-      return ConsCompletedFragment_Summon(data: {"title": title});
+      return ConsCompletedFragment_Summon(
+        data: {"title": title},
+        SUMM_WARR_NATURE: widget.SUMM_WARR_NATURE,
+      );
     }
 
     if (selectedTab == 1) {
       return ConsPendingFragment_Summon(
         data: {"title": title},
+        SUMM_WARR_NATURE: widget.SUMM_WARR_NATURE,
       );
     }
   }

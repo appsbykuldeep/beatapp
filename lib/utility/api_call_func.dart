@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:beatapp/classes/app_user.dart';
 import 'package:beatapp/model/api_response.dart';
@@ -36,7 +37,7 @@ Future<ApiResponse> dioApiCall({
     headers: headers,
     sendTimeout: Duration(seconds: timeoutSec),
     receiveTimeout: Duration(seconds: timeoutSec),
-    responseType: ResponseType.json,
+    responseType: ResponseType.plain,
     validateStatus: (status) => true,
   );
 
@@ -71,7 +72,7 @@ Future<ApiResponse> dioApiCall({
 
     if (dioResponse.statusCode == 200) {
       responsemodel.resultStatus = true;
-      responsemodel.resultData = dioResponse.data;
+      responsemodel.resultData = _tryDecode(dioResponse.data);
     }
   } on DioException catch (e) {
     if (e.response != null) {
@@ -122,3 +123,14 @@ Map<int, String> _statusCodeErrMsj = {
   408: 'Server not responding or network is slow.',
   500: 'Server error',
 };
+
+dynamic _tryDecode(dynamic data) {
+  try {
+    if (data is String) {
+      return jsonDecode(data);
+    }
+  } catch (e) {
+    return data;
+  }
+  return data;
+}

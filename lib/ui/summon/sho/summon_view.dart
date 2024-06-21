@@ -11,9 +11,13 @@ import 'package:flutter/material.dart';
 class SummonActivity extends StatefulWidget {
   final Map<String, String> data;
 
+  /// 1 for summon 2 for warrant
+  final int SUMM_WARR_NATURE;
+
   const SummonActivity({
     Key? key,
     required this.data,
+    required this.SUMM_WARR_NATURE,
   }) : super(key: key);
 
   @override
@@ -126,15 +130,18 @@ class _SummonActivityState extends State<SummonActivity> {
   Widget getSelectedView() {
     if (selectedTab == 0) {
       return UnassignedFragment(
-        data: {"title": title},
+        title: title,
+        SUMM_WARR_NATURE: widget.SUMM_WARR_NATURE,
       );
     } else if (selectedTab == 1) {
       return PendingFragment(
-        data: {"title": title},
+        title: title,
+        SUMM_WARR_NATURE: widget.SUMM_WARR_NATURE,
       );
     } else {
       return CompletedFragment(
-        data: {"title": title},
+        title: title,
+        SUMM_WARR_NATURE: widget.SUMM_WARR_NATURE,
       );
     }
   }

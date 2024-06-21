@@ -1,4 +1,25 @@
-part of 'summon_detail_view.dart';
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:beatapp/api/api_end_point.dart';
+import 'package:beatapp/custom_view/custom_dropdown_wid.dart';
+import 'package:beatapp/custom_view/image_viewer.dart';
+import 'package:beatapp/database/asset_db_helper.dart';
+import 'package:beatapp/entities/relation_type.dart';
+import 'package:beatapp/entities/warrant_exec_type.dart';
+import 'package:beatapp/utility/api_call_func.dart';
+import 'package:beatapp/utility/base64_utility.dart';
+import 'package:beatapp/utility/camera_and_file_provider.dart';
+import 'package:beatapp/utility/extentions/context_ext.dart';
+import 'package:beatapp/utility/extentions/int_ext.dart';
+import 'package:beatapp/utility/extentions/string_ext.dart';
+import 'package:beatapp/utility/extentions/textediting_ctrl_ext.dart';
+import 'package:beatapp/utility/get_lang_code.dart';
+import 'package:beatapp/utility/loaction_utils.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:get/get.dart';
 
 class SubmitSummonDetails extends StatefulWidget {
   final String SUMM_WARR_NUM;
@@ -56,7 +77,6 @@ class _SubmitSummonDetailsState extends State<SubmitSummonDetails> {
 
     selectedRelationType = allRelationTypesList.firstOrNull;
     selectedwarrantExecType = warrantExecTypeList.firstOrNull;
-    print(warrantExecTypeList);
 
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       position = await locationUtil.determinePosition();
@@ -86,10 +106,11 @@ class _SubmitSummonDetailsState extends State<SubmitSummonDetails> {
       apibody: body,
     );
 
-    if (resp.resultStatus) {
+    if (resp.resultStatus && resp.resultData.toString() == "1") {
       Get.back(result: true);
+      "Details submited successfully !".showTost();
     } else {
-      resp.resultMsj.showTost();
+      "Failed to submit details !".showTost();
     }
   }
 
@@ -108,255 +129,253 @@ class _SubmitSummonDetailsState extends State<SubmitSummonDetails> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 10),
-      child: Form(
-        key: formKey,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: Text(
-                "Submit Summon Details",
-                style: context.textTheme.titleMedium,
-              ),
-            ),
-            16.height,
-            Row(
-              children: [
-                Text("completed".translation),
-                Expanded(
-                  child: Obx(
-                    () => RichText(
-                      text: TextSpan(
-                        style: const TextStyle(
-                          fontSize: 11,
-                          fontWeight: FontWeight.w300,
-                          color: Colors.black,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Submit Summon Details"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 10),
+        child: Form(
+          key: formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Text("completed".translation),
+                  Expanded(
+                    child: Obx(
+                      () => RichText(
+                        text: TextSpan(
+                          style: const TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.black,
+                          ),
+                          children: [
+                            WidgetSpan(
+                              child: Radio(
+                                groupValue: isCompleted.value,
+                                value: true,
+                                onChanged: (value) {
+                                  isCompleted.value = value ?? false;
+                                },
+                              ),
+                              alignment: PlaceholderAlignment.middle,
+                            ),
+                            const TextSpan(
+                              text: "Yes\t",
+                            ),
+                            WidgetSpan(
+                              child: Radio(
+                                groupValue: isCompleted.value,
+                                value: false,
+                                onChanged: (value) {
+                                  isCompleted.value = value ?? false;
+                                },
+                              ),
+                              alignment: PlaceholderAlignment.middle,
+                            ),
+                            const TextSpan(
+                              text: "No",
+                            ),
+                          ],
                         ),
-                        children: [
-                          WidgetSpan(
-                            child: Radio(
-                              groupValue: isCompleted.value,
-                              value: true,
-                              onChanged: (value) {
-                                isCompleted.value = value ?? false;
-                              },
-                            ),
-                            alignment: PlaceholderAlignment.middle,
-                          ),
-                          const TextSpan(
-                            text: "Yes\t",
-                          ),
-                          WidgetSpan(
-                            child: Radio(
-                              groupValue: isCompleted.value,
-                              value: false,
-                              onChanged: (value) {
-                                isCompleted.value = value ?? false;
-                              },
-                            ),
-                            alignment: PlaceholderAlignment.middle,
-                          ),
-                          const TextSpan(
-                            text: "No",
-                          ),
-                        ],
                       ),
                     ),
-                  ),
-                ),
-              ],
-            ),
-            16.height,
-            Text(
-              "type_of_execution".translation,
-            ),
-            DropdownWid(
-              itemslist: warrantExecTypeList,
-              selectedvalue: selectedwarrantExecType,
-              validator: (p0) {
-                if (p0?.execTypeCD == 0) {
-                  return "select_type_of_execution".translation;
-                }
-                return null;
-              },
-              onchange: (val) {
-                selectedwarrantExecType = val;
-              },
-            ),
-            16.height,
-            const Text(
-              "Name of the person who receive summon",
-            ),
-            TextFormField(
-              maxLines: 1,
-              minLines: 1,
-              maxLength: 100,
-              textInputAction: TextInputAction.next,
-              textCapitalization: TextCapitalization.words,
-              controller: personNameCtrl,
-              validator: (value) {
-                if ((value ?? "").trim().isEmpty) {
-                  return "Fill person name";
-                }
-                return null;
-              },
-              decoration: const InputDecoration(
-                counterText: '',
-                border: OutlineInputBorder(),
-              ),
-            ),
-            16.height,
-            const Text(
-              "Remark",
-            ),
-            TextFormField(
-              minLines: 3,
-              maxLines: 5,
-              maxLength: 1000,
-              textCapitalization: TextCapitalization.words,
-              keyboardType: TextInputType.multiline,
-              controller: remarkCtrl,
-              validator: (value) {
-                if ((value ?? "").trim().isEmpty) {
-                  return "Fill remark";
-                }
-                return null;
-              },
-              decoration: const InputDecoration(
-                counterText: '',
-                border: OutlineInputBorder(),
-              ),
-            ),
-            16.height,
-            Text(
-              "relation_type".translation,
-            ),
-            DropdownWid(
-              itemslist: allRelationTypesList,
-              selectedvalue: selectedRelationType,
-              validator: (p0) {
-                if (p0?.RELATION_TYPE_CD == 0) {
-                  return "select_type_of_execution".translation;
-                }
-                return null;
-              },
-              onchange: (val) {
-                selectedRelationType = val;
-              },
-            ),
-            16.height,
-            Text(
-              "upload_photo".translation,
-            ),
-            5.height,
-            Obx(
-              () => InkWell(
-                onTap: () async {
-                  File? image =
-                      await CameraAndFileProvider().pickImageFromCamera();
-                  if (image != null) {
-                    PHOTO.value = Base64Helper.encodeImage(image);
-                  }
-                },
-                child: Container(
-                  height: 100,
-                  alignment: Alignment.centerLeft,
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: const BorderRadius.all(Radius.circular(5)),
-                    border: Border.all(
-                      color: Colors.black,
-                      width: 1.0,
-                    ),
-                  ),
-                  child: Row(
-                    children: [
-                      const Icon(
-                        Icons.camera_alt,
-                        size: 40,
-                      ),
-                      if (PHOTO.value.isNotEmpty)
-                        Expanded(
-                          child: Row(
-                            children: [
-                              Container(
-                                margin: const EdgeInsets.only(left: 26),
-                                child: InkWell(
-                                    onTap: () {
-                                      context.push(ImageViewer(
-                                        data: {"image": PHOTO.value},
-                                      ));
-                                    },
-                                    child: Image.memory(
-                                      Base64Helper.decodeBase64Image(
-                                          PHOTO.value),
-                                      height: 80,
-                                      width: 80,
-                                    )),
-                              ),
-                              Container(
-                                margin: const EdgeInsets.only(left: 26),
-                                child: InkWell(
-                                  onTap: () {
-                                    PHOTO.value = "";
-                                  },
-                                  child: const Icon(
-                                    Icons.cancel,
-                                    color: Colors.red,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            16.height,
-            RichText(
-              text: TextSpan(
-                style: context.textTheme.labelMedium,
-                text: "location".translation,
-                children: const [
-                  TextSpan(text: "\t"),
-                  WidgetSpan(
-                    child: Icon(
-                      Icons.location_on,
-                      size: 18,
-                    ),
-                    alignment: PlaceholderAlignment.bottom,
                   ),
                 ],
               ),
-            ),
-            5.height,
-            position == null
-                ? const Center(child: CircularProgressIndicator())
-                : Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text("Latitude : ${position!.latitude}"),
-                      Text("Longitude : ${position!.longitude}"),
-                    ],
-                  ),
-            if (position != null)
-              Padding(
-                padding: const EdgeInsets.only(top: 30, bottom: 50),
-                child: Center(
-                  child: FilledButton(
-                    onPressed: submitSummonDetails,
-                    child: Text(
-                      "submit".translation,
+              16.height,
+              Text(
+                "type_of_execution".translation,
+              ),
+              DropdownWid(
+                itemslist: warrantExecTypeList,
+                selectedvalue: selectedwarrantExecType,
+                validator: (p0) {
+                  if (p0?.execTypeCD == 0) {
+                    return "select_type_of_execution".translation;
+                  }
+                  return null;
+                },
+                onchange: (val) {
+                  selectedwarrantExecType = val;
+                },
+              ),
+              16.height,
+              const Text(
+                "Name of the person who receive summon",
+              ),
+              TextFormField(
+                maxLines: 1,
+                minLines: 1,
+                maxLength: 100,
+                textInputAction: TextInputAction.next,
+                textCapitalization: TextCapitalization.words,
+                controller: personNameCtrl,
+                validator: (value) {
+                  if ((value ?? "").trim().isEmpty) {
+                    return "Fill person name";
+                  }
+                  return null;
+                },
+                decoration: const InputDecoration(
+                  counterText: '',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              16.height,
+              const Text(
+                "Remark",
+              ),
+              TextFormField(
+                minLines: 3,
+                maxLines: 5,
+                maxLength: 1000,
+                textCapitalization: TextCapitalization.words,
+                keyboardType: TextInputType.multiline,
+                controller: remarkCtrl,
+                validator: (value) {
+                  if ((value ?? "").trim().isEmpty) {
+                    return "Fill remark";
+                  }
+                  return null;
+                },
+                decoration: const InputDecoration(
+                  counterText: '',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              16.height,
+              Text(
+                "relation_type".translation,
+              ),
+              DropdownWid(
+                itemslist: allRelationTypesList,
+                selectedvalue: selectedRelationType,
+                validator: (p0) {
+                  if (p0?.RELATION_TYPE_CD == 0) {
+                    return "select_type_of_execution".translation;
+                  }
+                  return null;
+                },
+                onchange: (val) {
+                  selectedRelationType = val;
+                },
+              ),
+              16.height,
+              Text(
+                "upload_photo".translation,
+              ),
+              5.height,
+              Obx(
+                () => InkWell(
+                  onTap: () async {
+                    File? image =
+                        await CameraAndFileProvider().pickImageFromCamera();
+                    if (image != null) {
+                      PHOTO.value = Base64Helper.encodeImage(image);
+                    }
+                  },
+                  child: Container(
+                    height: 100,
+                    alignment: Alignment.centerLeft,
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: const BorderRadius.all(Radius.circular(5)),
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 1.0,
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        const Icon(
+                          Icons.camera_alt,
+                          size: 40,
+                        ),
+                        if (PHOTO.value.isNotEmpty)
+                          Expanded(
+                            child: Row(
+                              children: [
+                                Container(
+                                  margin: const EdgeInsets.only(left: 26),
+                                  child: InkWell(
+                                      onTap: () {
+                                        context.push(ImageViewer(
+                                          data: {"image": PHOTO.value},
+                                        ));
+                                      },
+                                      child: Image.memory(
+                                        Base64Helper.decodeBase64Image(
+                                            PHOTO.value),
+                                        height: 80,
+                                        width: 80,
+                                      )),
+                                ),
+                                Container(
+                                  margin: const EdgeInsets.only(left: 26),
+                                  child: InkWell(
+                                    onTap: () {
+                                      PHOTO.value = "";
+                                    },
+                                    child: const Icon(
+                                      Icons.cancel,
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                      ],
                     ),
                   ),
                 ),
               ),
-          ],
+              16.height,
+              RichText(
+                text: TextSpan(
+                  style: context.textTheme.labelMedium,
+                  text: "location".translation,
+                  children: const [
+                    TextSpan(text: "\t"),
+                    WidgetSpan(
+                      child: Icon(
+                        Icons.location_on,
+                        size: 18,
+                      ),
+                      alignment: PlaceholderAlignment.bottom,
+                    ),
+                  ],
+                ),
+              ),
+              5.height,
+              position == null
+                  ? const Center(child: CircularProgressIndicator())
+                  : Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Latitude : ${position!.latitude}"),
+                        Text("Longitude : ${position!.longitude}"),
+                      ],
+                    ),
+              if (position != null)
+                Padding(
+                  padding: const EdgeInsets.only(top: 30, bottom: 50),
+                  child: Center(
+                    child: FilledButton(
+                      onPressed: submitSummonDetails,
+                      child: Text(
+                        "submit".translation,
+                      ),
+                    ),
+                  ),
+                ),
+            ],
+          ),
         ),
       ),
     );

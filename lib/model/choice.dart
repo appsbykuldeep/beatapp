@@ -1,14 +1,14 @@
 class Choice {
   Choice(
       {required this.id,
-        required this.title,
-        required this.icon,
-        required this.pendingCount,
-        required this.completedCount,
-        required this.totalCount,
-        required this.isShowTotal,
-        required this.isShowPending,
-        required this.isShowCompleted});
+      required this.title,
+      required this.icon,
+      required this.pendingCount,
+      required this.completedCount,
+      required this.totalCount,
+      required this.isShowTotal,
+      required this.isShowPending,
+      required this.isShowCompleted});
 
   String title;
   String icon;
@@ -19,4 +19,9 @@ class Choice {
   int totalCount;
   bool isShowCompleted;
   bool isShowTotal;
+
+  @override
+  String toString() {
+    return "Choice(title:$title,id:$id,icon:$icon)";
+  }
 }

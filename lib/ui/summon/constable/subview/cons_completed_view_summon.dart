@@ -21,8 +21,14 @@ import 'package:flutter/scheduler.dart';
 class ConsCompletedFragment_Summon extends StatefulWidget {
   final Map<String, String> data;
 
-  const ConsCompletedFragment_Summon({Key? key, required this.data})
-      : super(key: key);
+  /// 1 for summon 2 for warrant
+  final int SUMM_WARR_NATURE;
+
+  const ConsCompletedFragment_Summon({
+    Key? key,
+    required this.data,
+    required this.SUMM_WARR_NATURE,
+  }) : super(key: key);
 
   @override
   State<ConsCompletedFragment_Summon> createState() =>
@@ -48,7 +54,7 @@ class _ConsCompletedFragment_SummonState
     var userData = await LoginResponseModel.fromPreference();
     var data = {
       "PS_CD": userData.psCd,
-      "SUMM_WARR_NATURE": title == "summon" ? 1 : 2
+      "SUMM_WARR_NATURE": widget.SUMM_WARR_NATURE,
     };
     var response = await HttpRequst.postRequestWithTokenAndBody(
         context, EndPoints.COMPLETED_SUMMON_BEAT, data, true);
@@ -368,6 +374,7 @@ class _ConsCompletedFragment_SummonState
           context.push(SummonDetailActivity(
             SUMM_WARR_NUM: data.SUMM_WARR_NUM,
             detailType: SummonDetailType.completed,
+            SUMM_WARR_NATURE: widget.SUMM_WARR_NATURE,
           ));
         },
         child: Container(

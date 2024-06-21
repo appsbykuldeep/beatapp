@@ -12,12 +12,18 @@ import 'package:beatapp/utility/message_utility.dart';
 import 'package:beatapp/utility/resource_provider.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 
 class UnassignedFragment extends StatefulWidget {
-  final Map<String, String> data;
-  const UnassignedFragment({Key? key, required this.data}) : super(key: key);
+  final String title;
+  final int SUMM_WARR_NATURE;
+  const UnassignedFragment({
+    Key? key,
+    required this.title,
+    required this.SUMM_WARR_NATURE,
+  }) : super(key: key);
 
   @override
   State<UnassignedFragment> createState() => _UnassignedFragmentState();
@@ -26,19 +32,23 @@ class UnassignedFragment extends StatefulWidget {
 class _UnassignedFragmentState extends State<UnassignedFragment> {
   List<SummonResponse> _lstSummon = [];
   final List<SummonResponse> _lstSummonAll = [];
-  String title = "";
+
   final pref = PreferenceHelper();
 
   @override
   void initState() {
-    title = widget.data["title"] ?? "";
-    _getUnAssignedList();
     super.initState();
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      _getUnAssignedList();
+    });
   }
 
   void _getUnAssignedList() async {
     var pscd = AppUser.PS_CD;
-    var data = {"PS_CD": pscd, "SUMM_WARR_NATURE": title == "summon" ? 1 : 2};
+    var data = {
+      "PS_CD": pscd,
+      "SUMM_WARR_NATURE": widget.SUMM_WARR_NATURE,
+    };
     /*  final res=await callApi(endPoint: EndPoints.UNASSIGNED_SUMMON,request: data);
     print(res.body);*/
 
@@ -226,7 +236,7 @@ class _UnassignedFragmentState extends State<UnassignedFragment> {
       backgroundColor: Color(ColorProvider.color_window_bg),
       appBar: AppBar(
         foregroundColor: Colors.white,
-        title: Text(getTranlateString(title)),
+        title: Text(getTranlateString(widget.title)),
         backgroundColor: Color(ColorProvider.colorPrimary),
       ),
       body: _lstSummon.isNotEmpty

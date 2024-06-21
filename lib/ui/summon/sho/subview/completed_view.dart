@@ -14,9 +14,13 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 class CompletedFragment extends StatefulWidget {
-  final Map<String, String> data;
-
-  const CompletedFragment({Key? key, required this.data}) : super(key: key);
+  final String title;
+  final int SUMM_WARR_NATURE;
+  const CompletedFragment({
+    Key? key,
+    required this.title,
+    required this.SUMM_WARR_NATURE,
+  }) : super(key: key);
 
   @override
   State<CompletedFragment> createState() => _CompletedFragmentState();
@@ -25,11 +29,9 @@ class CompletedFragment extends StatefulWidget {
 class _CompletedFragmentState extends State<CompletedFragment> {
   List<SummonResponse> _lstSummon = [];
   final List<SummonResponse> _lstSummonAll = [];
-  String title = "";
 
   @override
   void initState() {
-    title = widget.data["title"] ?? "";
     _getUnAssignedList();
     super.initState();
   }
@@ -38,7 +40,7 @@ class _CompletedFragmentState extends State<CompletedFragment> {
     var userData = await LoginResponseModel.fromPreference();
     var data = {
       "PS_CD": userData.psCd,
-      "SUMM_WARR_NATURE": title == "summon" ? 1 : 2
+      "SUMM_WARR_NATURE": widget.SUMM_WARR_NATURE,
     };
     late Response response;
     response = await HttpRequst.postRequestWithTokenAndBody(
@@ -69,7 +71,7 @@ class _CompletedFragmentState extends State<CompletedFragment> {
         backgroundColor: Color(ColorProvider.color_window_bg),
         appBar: AppBar(
           foregroundColor: Colors.white,
-          title: Text(getTranlateString(title)),
+          title: Text(getTranlateString(widget.title)),
           backgroundColor: Color(ColorProvider.colorPrimary),
         ),
         body: Container(
@@ -246,6 +248,7 @@ class _CompletedFragmentState extends State<CompletedFragment> {
         context.push(SummonDetailActivity(
           SUMM_WARR_NUM: data.SUMM_WARR_NUM,
           detailType: SummonDetailType.completed,
+          SUMM_WARR_NATURE: widget.SUMM_WARR_NATURE,
         ));
       },
       child: Container(
