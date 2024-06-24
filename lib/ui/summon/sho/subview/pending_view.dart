@@ -35,6 +35,7 @@ class _PendingFragmentState extends State<PendingFragment> {
   List<SummonResponse> lstSummonAll = [];
 
   final pref = PreferenceHelper();
+  bool isDataSubmitted = false;
 
   @override
   void initState() {
@@ -214,15 +215,19 @@ class _PendingFragmentState extends State<PendingFragment> {
     var data = _lstSummon[index];
     return InkWell(
         onTap: () async {
-          final result = await context.push(
+          isDataSubmitted = false;
+          await context.push(
             SummonDetailActivity(
               SUMM_WARR_NUM: data.SUMM_WARR_NUM,
               detailType: SummonDetailType.pending,
               SUMM_WARR_NATURE: widget.SUMM_WARR_NATURE,
+              onSubmitDetail: () {
+                isDataSubmitted = true;
+              },
             ),
           );
 
-          if (result is bool && result) {
+          if (isDataSubmitted) {
             _getUnAssignedList();
           }
         },

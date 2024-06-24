@@ -23,12 +23,14 @@ class SummonDetailActivity extends StatefulWidget {
 
   /// 1 for summon 2 for warrant
   final int SUMM_WARR_NATURE;
+  final VoidCallback? onSubmitDetail;
 
   const SummonDetailActivity({
     Key? key,
     required this.SUMM_WARR_NUM,
     required this.detailType,
     required this.SUMM_WARR_NATURE,
+    this.onSubmitDetail,
   }) : super(key: key);
 
   @override
@@ -90,26 +92,28 @@ class _SummonDetailActivityState extends State<SummonDetailActivity> {
               .translation),
           backgroundColor: Color(ColorProvider.colorPrimary),
         ),
-        floatingActionButton:
-            (widget.SUMM_WARR_NATURE == 1 && widget.detailType.isPending)
-                ? FloatingActionButton.extended(
-                    onPressed: () async {
-                      final result = await context.push(
-                        SubmitSummonDetails(
-                          key: ValueKey(widget.SUMM_WARR_NUM),
-                          SUMM_WARR_NUM: widget.SUMM_WARR_NUM,
-                          SUMM_WARR_NATURE: widget.SUMM_WARR_NATURE,
-                        ),
-                      );
+        floatingActionButton: (widget.detailType.isPending)
+            ? FloatingActionButton.extended(
+                onPressed: () async {
+                  final result = await context.push(
+                    SubmitSummonDetails(
+                      key: ValueKey(widget.SUMM_WARR_NUM),
+                      SUMM_WARR_NUM: widget.SUMM_WARR_NUM,
+                      SUMM_WARR_NATURE: widget.SUMM_WARR_NATURE,
+                    ),
+                  );
 
-                      if (result is bool && result) {
-                        _getSummonDetails();
-                      }
-                    },
-                    label: const Text("Add"),
-                    icon: const Icon(Icons.add),
-                  )
-                : null,
+                  if (result is bool && result) {
+                    _getSummonDetails();
+                    widget.onSubmitDetail?.call();
+                  }
+                },
+                label: Text(
+                    (widget.SUMM_WARR_NATURE == 2 ? "warrant" : "summon")
+                        .translation),
+                icon: const Icon(Icons.add),
+              )
+            : null,
         body: _summon != null
             ? SingleChildScrollView(
                 child: Container(

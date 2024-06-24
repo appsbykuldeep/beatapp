@@ -24,7 +24,7 @@ import 'package:get/get.dart';
 class SubmitSummonDetails extends StatefulWidget {
   final String SUMM_WARR_NUM;
 
-  /// 1 for summon 2 for warent
+  /// 1 for summon 2 for Warrant
   final int SUMM_WARR_NATURE;
   const SubmitSummonDetails({
     super.key,
@@ -53,6 +53,8 @@ class _SubmitSummonDetailsState extends State<SubmitSummonDetails> {
   Position? position;
   final isCompleted = false.obs;
   final PHOTO = "".obs;
+
+  late final bool isWarrant = widget.SUMM_WARR_NATURE == 2;
 
   void onPageInit() {
     LANG_CD = getLangCode();
@@ -131,9 +133,10 @@ class _SubmitSummonDetailsState extends State<SubmitSummonDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Submit Summon Details"),
+        title: Text(
+            isWarrant ? "Submit Warrant Details" : "Submit Summon Details"),
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 10),
         child: Form(
           key: formKey,
@@ -204,8 +207,10 @@ class _SubmitSummonDetailsState extends State<SubmitSummonDetails> {
                 },
               ),
               16.height,
-              const Text(
-                "Name of the person who receive summon",
+              Text(
+                isWarrant
+                    ? "Name of the person who receive warrant"
+                    : "Name of the person who receive summon",
               ),
               TextFormField(
                 maxLines: 1,
@@ -358,8 +363,10 @@ class _SubmitSummonDetailsState extends State<SubmitSummonDetails> {
                   : Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Latitude : ${position!.latitude}"),
-                        Text("Longitude : ${position!.longitude}"),
+                        Text(
+                            "Latitude : ${position!.latitude.toStringAsFixed(6)}"),
+                        Text(
+                            "Longitude : ${position!.longitude.toStringAsFixed(6)}"),
                       ],
                     ),
               if (position != null)
