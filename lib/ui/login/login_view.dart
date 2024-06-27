@@ -55,7 +55,9 @@ class _LoginState extends State<Login> {
 
   9454404315
   
-  81159 55084
+  8115955084
+
+  8840505370
 
 
 Testing OTP - 0123
@@ -64,7 +66,7 @@ Testing OTP - 0123
 
   void debugSetup() {
     if (!kDebugMode) return;
-    _con_MobileNo.text = "9454404315";
+    _con_MobileNo.text = "8840505370";
     _con_Password.text = "sot@123";
     if (EndPoints.isLiveApk) return;
     _con_OtpBox1.text = "0";
@@ -94,13 +96,11 @@ Testing OTP - 0123
     /* final res=await callApiLogin(endPoint:EndPoints.END_POINT_VALIDATE_MOBILE,request: param );
     print(res.body);*/
     print(param);
-    var response = await HttpRequst.postRequestWithBody(
-        context, EndPoints.END_POINT_VALIDATE_MOBILE, param, true);
+    var response = await HttpRequst.postRequestWithBody(context, EndPoints.END_POINT_VALIDATE_MOBILE, param, true);
 
     print("code ${response.statusCode}");
     print("code ${response.data}");
-    if (response.statusCode == 200 &&
-        !response.toString().contains("Invalid User Detail")) {
+    if (response.statusCode == 200 && !response.toString().contains("Invalid User Detail")) {
       _responseOTP = response.data.toString();
       showOTPDialog(context);
     } else {
@@ -111,10 +111,7 @@ Testing OTP - 0123
 
   String getOTP() {
     String otp = "";
-    otp = _con_OtpBox1.text +
-        _con_OtpBox2.text +
-        _con_OtpBox3.text +
-        _con_OtpBox4.text;
+    otp = _con_OtpBox1.text + _con_OtpBox2.text + _con_OtpBox3.text + _con_OtpBox4.text;
     return otp;
   }
 
@@ -151,8 +148,7 @@ Testing OTP - 0123
         (route) => false,
       );
     } else {
-      MessageUtility.showToast(
-          context, AppTranslations.of(context)!.text("error_mobile_valid"));
+      MessageUtility.showToast(context, AppTranslations.of(context)!.text("error_mobile_valid"));
     }
     setState(() {});
   }
@@ -275,14 +271,11 @@ Testing OTP - 0123
                                     color: Color(ColorProvider.colorPrimary),
                                   ),
                                   Padding(
-                                    padding:
-                                        EdgeInsets.all(SizeProvider.size_15),
+                                    padding: EdgeInsets.all(SizeProvider.size_15),
                                     child: Text(
-                                      AppTranslations.of(context)!
-                                          .text("via_otp"),
+                                      AppTranslations.of(context)!.text("via_otp"),
                                       textAlign: TextAlign.center,
-                                      style:
-                                          const TextStyle(color: Colors.grey),
+                                      style: const TextStyle(color: Colors.grey),
                                     ),
                                   )
                                 ],
@@ -294,17 +287,13 @@ Testing OTP - 0123
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                const VerticalDivider(
-                                    color: Colors.grey, thickness: 2),
+                                const VerticalDivider(color: Colors.grey, thickness: 2),
                                 Padding(
                                   padding: EdgeInsets.all(SizeProvider.size_15),
-                                  child: Text(
-                                      AppTranslations.of(context)!.text("or"),
-                                      style:
-                                          const TextStyle(color: Colors.grey)),
+                                  child: Text(AppTranslations.of(context)!.text("or"),
+                                      style: const TextStyle(color: Colors.grey)),
                                 ),
-                                const VerticalDivider(
-                                    color: Colors.grey, thickness: 2),
+                                const VerticalDivider(color: Colors.grey, thickness: 2),
                               ],
                             ),
                           ),
@@ -326,14 +315,9 @@ Testing OTP - 0123
                                     color: Color(ColorProvider.colorPrimary),
                                   ),
                                   Padding(
-                                    padding:
-                                        EdgeInsets.all(SizeProvider.size_15),
-                                    child: Text(
-                                        AppTranslations.of(context)!
-                                            .text("via_password"),
-                                        textAlign: TextAlign.center,
-                                        style: const TextStyle(
-                                            color: Colors.grey)),
+                                    padding: EdgeInsets.all(SizeProvider.size_15),
+                                    child: Text(AppTranslations.of(context)!.text("via_password"),
+                                        textAlign: TextAlign.center, style: const TextStyle(color: Colors.grey)),
                                   )
                                 ],
                               ),
@@ -351,8 +335,7 @@ Testing OTP - 0123
                                     labelText: 'password',
                                     controller: _con_Password,
                                     validator: Validations.emptyValidator,
-                                    textInputType:
-                                        TextInputType.visiblePassword,
+                                    textInputType: TextInputType.visiblePassword,
                                     suffixIcon: const Icon(
                                       Icons.visibility,
                                       color: Colors.grey,
@@ -369,17 +352,14 @@ Testing OTP - 0123
                                   child: ElevatedButton(
                                       onPressed: () {
                                         if (formKey.currentState!.validate() &&
-                                            passwordFormKey.currentState!
-                                                .validate()) {
+                                            passwordFormKey.currentState!.validate()) {
                                           _logInWithPassword();
                                         }
                                       },
-                                      style: ElevatedButton.styleFrom(
-                                          backgroundColor: Color(
-                                              ColorProvider.colorPrimary)),
+                                      style:
+                                          ElevatedButton.styleFrom(backgroundColor: Color(ColorProvider.colorPrimary)),
                                       child: Text(
-                                        AppTranslations.of(context)!
-                                            .text("login"),
+                                        AppTranslations.of(context)!.text("login"),
                                         style: const TextStyle(
                                           color: Colors.white,
                                         ),
@@ -433,27 +413,23 @@ Testing OTP - 0123
             backgroundColor: Colors.transparent,
             child: Container(
               width: MediaQuery.of(context).size.width * .90,
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Color(0xFF000000),
-                      offset: Offset(
-                        5.0,
-                        5.0,
-                      ),
-                      blurRadius: 10.0,
-                      spreadRadius: 2.0,
-                    ), //BoxShadow
-                    //BoxShadow
-                  ]),
+              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10), boxShadow: const [
+                BoxShadow(
+                  color: Color(0xFF000000),
+                  offset: Offset(
+                    5.0,
+                    5.0,
+                  ),
+                  blurRadius: 10.0,
+                  spreadRadius: 2.0,
+                ), //BoxShadow
+                //BoxShadow
+              ]),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Padding(
-                    padding:
-                        EdgeInsets.all(PaddingAndMarginProvider.padding_20),
+                    padding: EdgeInsets.all(PaddingAndMarginProvider.padding_20),
                     child: Text(
                       AppTranslations.of(context)!.text(
                         "verification",
@@ -500,17 +476,14 @@ Testing OTP - 0123
                                 focusNode: focus_box1,
                                 maxLength: 1,
                                 maxLines: 1,
-                                inputFormatters: [
-                                  FilteringTextInputFormatter.digitsOnly
-                                ],
+                                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                                 keyboardType: TextInputType.number,
                                 textAlignVertical: TextAlignVertical.center,
                                 decoration: const InputDecoration(
                                   counterText: "",
                                 ),
                                 onChanged: (value) => {
-                                      if (value.isNotEmpty)
-                                        {focus_box2.requestFocus()}
+                                      if (value.isNotEmpty) {focus_box2.requestFocus()}
                                     }),
                           )),
                       Flexible(
@@ -523,9 +496,7 @@ Testing OTP - 0123
                               textAlign: TextAlign.center,
                               textAlignVertical: TextAlignVertical.center,
                               focusNode: focus_box2,
-                              inputFormatters: [
-                                FilteringTextInputFormatter.digitsOnly
-                              ],
+                              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                               keyboardType: TextInputType.number,
                               maxLength: 1,
                               maxLines: 1,
@@ -552,9 +523,7 @@ Testing OTP - 0123
                                 textAlignVertical: TextAlignVertical.center,
                                 maxLength: 1,
                                 maxLines: 1,
-                                inputFormatters: [
-                                  FilteringTextInputFormatter.digitsOnly
-                                ],
+                                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                                 keyboardType: TextInputType.number,
                                 decoration: const InputDecoration(
                                   counterText: "",
@@ -579,9 +548,7 @@ Testing OTP - 0123
                                 textAlignVertical: TextAlignVertical.center,
                                 maxLength: 1,
                                 maxLines: 1,
-                                inputFormatters: [
-                                  FilteringTextInputFormatter.digitsOnly
-                                ],
+                                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                                 keyboardType: TextInputType.number,
                                 decoration: const InputDecoration(
                                   counterText: "",
@@ -622,8 +589,7 @@ Testing OTP - 0123
                           padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                           decoration: BoxDecoration(
                             color: Color(ColorProvider.colorPrimary),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(8)),
+                            borderRadius: const BorderRadius.all(Radius.circular(8)),
                           ),
                           child: Text(
                             textAlign: TextAlign.center,
@@ -639,10 +605,7 @@ Testing OTP - 0123
                           if (getOTP().length == 4)
                             {_logInWithOTP()}
                           else
-                            {
-                              MessageUtility.showToast(
-                                  context, "Please enter Otp")
-                            }
+                            {MessageUtility.showToast(context, "Please enter Otp")}
                         },
                         child: Container(
                           width: MediaQuery.of(context).size.width * .35,
@@ -650,8 +613,7 @@ Testing OTP - 0123
                           padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                           decoration: BoxDecoration(
                             color: Color(ColorProvider.colorPrimary),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(8)),
+                            borderRadius: const BorderRadius.all(Radius.circular(8)),
                           ),
                           child: Text(
                             AppTranslations.of(context)!.text("verify"),
